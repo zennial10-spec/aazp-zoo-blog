@@ -8,7 +8,7 @@ A polished, single-file interactive blog for **Arignar Anna Zoological Park (AAZ
 
 This interactive blog was created as an English Digital Assignment to document and present the wildlife of Arignar Anna Zoological Park (also known as Vandalur Zoo). Established in 1855 as the Madras Zoo — India's first public zoo — and relocated to its current 602-hectare campus in the Vandalur Reserve Forest in 1985, AAZP is home to over 2,500 animals across 170+ species.
 
-The project combines **personal photography** from a September 2024 visit with **scientifically accurate descriptions** sourced from the IUCN Red List, Central Zoo Authority publications, and official zoo signage. Every animal card features auto-rotating image slideshows (for species with multiple photos), detailed modal profiles, and conservation status information.
+The project combines **personal photography** from a September 2026 visit with **scientifically accurate descriptions** sourced from the IUCN Red List, Central Zoo Authority publications, and official zoo signage. Every animal card features auto-rotating image slideshows (for species with multiple photos), detailed modal profiles, and conservation status information.
 
 ## 📁 Project Structure
 ```
@@ -93,7 +93,7 @@ git push -u origin main
 
 ## 📄 Sources & Attribution
 - **Animal Data**: IUCN Red List (CC BY 4.0), CZA publications, AAZP signage
-- **Photography**: Author's personal visit (Sept 2024)
+- **Photography**: Author's personal visit (Sept 2026)
 - **Map**: Official AAZP 2023 map (PDF extracted to PNG)
 - **Design Inspiration**: Lewa House (lewahouse.com)
 
