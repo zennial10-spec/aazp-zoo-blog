@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+vendor/
+
+# Build outputs
+dist/
+build/
+*.min.js
+*.min.css
+
+# IDE/Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Large media (use Git LFS instead)
+*.webm
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.pdf
+*.zip
+*.tar.gz
+
+# Large images (>5MB)
+*.png
+*.jpg
+*.jpeg
+*.webp
+
+# Local config
+.env
+.env.local
+*.log
+
+# Temporary
+tmp/
+temp/
+*.tmp

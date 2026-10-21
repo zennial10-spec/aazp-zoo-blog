@@ -1,0 +1,1609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arignar Anna Zoological Park — A Visit to Remember</title>
+<meta name="description" content="An interactive blog documenting my educational visit to Arignar Anna Zoological Park, Vandalur, Tamil Nadu.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #faf9f6;
+  --fg: #1a1a1a;
+  --fg-muted: #4a4a4a;
+  --accent: #2d6a4f;
+  --accent-dark: #1b4d32;
+  --accent-light: #40916c;
+  --card: #ffffff;
+  --border: #e8e4dc;
+  --shadow: rgba(26, 26, 26, 0.08);
+  --shadow-strong: rgba(26, 26, 26, 0.15);
+  --focus: #2d6a4f;
+  --max-width: 1200px;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+  --space-6: 4rem;
+  --radius: 8px;
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141414;
+    --fg: #f5f5f5;
+    --fg-muted: #a0a0a0;
+    --accent: #52b788;
+    --accent-dark: #74c69d;
+    --accent-light: #40916c;
+    --card: #1e1e1e;
+    --border: #333;
+    --shadow: rgba(0, 0, 0, 0.3);
+    --shadow-strong: rgba(0, 0, 0, 0.5);
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.7;
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0 0 var(--space-3);
+  color: var(--fg);
+}
+
+h1 { font-size: clamp(2.5rem, 5vw, 4rem); letter-spacing: -0.02em; }
+h2 { font-size: clamp(1.75rem, 3.5vw, 2.5rem); letter-spacing: -0.01em; }
+h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
+h4 { font-size: clamp(1.1rem, 2vw, 1.35rem); }
+
+p { margin: 0 0 var(--space-3); }
+
+a { color: var(--accent); text-decoration: none; transition: color var(--transition); }
+a:hover { color: var(--accent-dark); }
+a:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; border-radius: 2px; }
+
+img { max-width: 100%; height: auto; display: block; }
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-3);
+}
+
+/* Header & Navigation */
+.site-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(250, 249, 246, 0.9);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+@media (prefers-color-scheme: dark) {
+  .site-header { background: rgba(20, 20, 20, 0.9); }
+}
+
+.site-header.scrolled { box-shadow: 0 4px 20px var(--shadow); }
+.site-header.hidden { transform: translateY(-100%); }
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  gap: var(--space-4);
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--fg);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+
+.nav-links {
+  display: none;
+  gap: var(--space-4);
+  list-style: none;
+  margin: 0; padding: 0;
+}
+
+.nav-links a {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--fg-muted);
+  padding: var(--space-1) 0;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--transition);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.nav-links a.active { color: var(--accent); }
+
+@media (min-width: 768px) {
+  .nav-links { display: flex; }
+}
+
+.mobile-menu-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px; height: 44px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.mobile-menu-btn span,
+.mobile-menu-btn span::before,
+.mobile-menu-btn span::after {
+  display: block;
+  width: 24px; height: 2px;
+  background: var(--fg);
+  border-radius: 2px;
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+.mobile-menu-btn span::before { content: ''; transform: translateY(-7px); }
+.mobile-menu-btn span::after { content: ''; transform: translateY(7px); }
+
+.mobile-menu-btn.active span { background: transparent; }
+.mobile-menu-btn.active span::before { transform: rotate(45deg); }
+.mobile-menu-btn.active span::after { transform: rotate(-45deg); }
+
+@media (min-width: 768px) { .mobile-menu-btn { display: none; } }
+
+/* Mobile Nav Overlay */
+.mobile-nav {
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+  background: var(--bg);
+  padding: var(--space-6) var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  transform: translateX(100%);
+  transition: transform var(--transition);
+}
+
+.mobile-nav.open { transform: translateX(0); }
+.mobile-nav a { font-size: 1.5rem; font-weight: 500; color: var(--fg); font-family: 'Playfair Display', serif; }
+.mobile-nav a.active { color: var(--accent); }
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-top: 72px;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: var(--space-6) var(--space-3);
+  max-width: 800px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: var(--space-1) var(--space-3);
+  margin-bottom: var(--space-4);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--fg-muted);
+  box-shadow: 0 4px 20px var(--shadow);
+  animation: fadeUp 0.8s var(--transition) both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero h1 {
+  margin-bottom: var(--space-3);
+  animation: fadeUp 0.8s var(--transition) 0.1s both;
+}
+
+.hero .lead {
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  color: var(--fg-muted);
+  max-width: 600px;
+  margin: 0 auto var(--space-5);
+  animation: fadeUp 0.8s var(--transition) 0.2s both;
+}
+
+.hero-actions {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: fadeUp 0.8s var(--transition) 0.3s both;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  border-radius: var(--radius);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.btn-primary:hover { background: var(--accent-dark); border-color: var(--accent-dark); color: #fff; }
+
+.btn-secondary {
+  background: transparent;
+  color: var(--fg);
+  border-color: var(--border);
+}
+
+.btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+
+.scroll-indicator {
+  position: absolute;
+  bottom: var(--space-5);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--fg-muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(8px); } }
+
+/* Sections */
+.section { padding: var(--space-6) 0; }
+.section-header { text-align: center; margin-bottom: var(--space-5); }
+.section-header h2 { margin-bottom: var(--space-2); }
+.section-header p { color: var(--fg-muted); max-width: 600px; margin: 0 auto; }
+
+/* About Section */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .about-grid { grid-template-columns: 1fr 1fr; }
+}
+
+.about-image { position: relative; border-radius: var(--radius); overflow: hidden; aspect-ratio: 4/3; }
+.about-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--transition); }
+.about-image:hover img { transform: scale(1.03); }
+
+.about-text h3 { margin-bottom: var(--space-3); }
+.about-text p { color: var(--fg-muted); margin-bottom: var(--space-3); }
+
+.stats { display: flex; gap: var(--space-4); margin-top: var(--space-4); flex-wrap: wrap; }
+.stat { text-align: center; }
+.stat-number { 
+  display: block; 
+  font-family: 'Playfair Display', serif; 
+  font-size: 2.5rem; 
+  font-weight: 600; 
+  color: var(--accent); 
+  line-height: 1;
+  transition: all 0.3s ease;
+}
+.stat-number.counting {
+  animation: countUp 2s ease-out forwards;
+}
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.stat-label { font-size: 0.875rem; color: var(--fg-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+
+/* Wildlife Gallery */
+.wildlife-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-4);
+}
+
+.animal-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+  cursor: pointer;
+}
+
+.animal-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px var(--shadow-strong);
+}
+
+.animal-card:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+.animal-card-image {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+
+.animal-card-image img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.5s var(--transition), opacity 0.3s ease;
+}
+
+.animal-card:hover .animal-card-image img { transform: scale(1.05); }
+
+.slideshow-image {
+  transition: opacity 0.3s ease;
+}
+
+.animal-card-content { padding: var(--space-3); }
+
+.animal-card-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin: 0 0 var(--space-1);
+}
+
+.animal-card-meta {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  font-size: 0.75rem;
+  color: var(--fg-muted);
+}
+
+.animal-card-meta span {
+  background: var(--bg);
+  padding: 2px 8px;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+}
+
+/* Animal Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition), visibility var(--transition);
+}
+
+.modal-overlay.open { opacity: 1; visibility: visible; }
+
+.modal {
+  background: var(--card);
+  border-radius: var(--radius);
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  overflow: hidden;
+  transform: scale(0.95) translateY(20px);
+  transition: transform var(--transition);
+}
+
+.modal-overlay.open .modal { transform: scale(1) translateY(0); }
+
+.modal-header {
+  position: relative;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.modal-header img { width: 100%; height: 100%; object-fit: cover; }
+
+.modal-close {
+  position: absolute;
+  top: var(--space-3); right: var(--space-3);
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition);
+  z-index: 10;
+}
+
+.modal-close:hover { background: rgba(0, 0, 0, 0.7); }
+
+.modal-body { padding: var(--space-4); }
+
+.modal-title {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-3);
+}
+
+.modal-title h3 { margin: 0; }
+
+.modal-meta {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  font-size: 0.75rem;
+  color: var(--fg-muted);
+}
+
+.modal-meta span {
+  background: var(--bg);
+  padding: 2px 8px;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+}
+
+.modal-description { color: var(--fg-muted); line-height: 1.8; }
+
+.modal-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border);
+}
+
+.modal-gallery img {
+  width: 100%; aspect-ratio: 1; object-fit: cover;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: transform var(--transition);
+  border: 2px solid transparent;
+}
+
+.modal-gallery img:hover { transform: scale(1.02); }
+.modal-gallery img.active { border-color: var(--accent); }
+
+/* Map Section */
+.map-container {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--card);
+}
+
+.map-container iframe,
+.map-container img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+/* Reflection */
+.reflection {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-5);
+}
+
+.reflection blockquote {
+  margin: 0;
+  padding-left: var(--space-4);
+  border-left: 3px solid var(--accent);
+  font-style: italic;
+  color: var(--fg-muted);
+  font-size: 1.125rem;
+}
+
+.reflection cite { display: block; margin-top: var(--space-3); font-style: normal; font-weight: 500; color: var(--fg); }
+
+/* Footer */
+.site-footer {
+  background: var(--card);
+  border-top: 1px solid var(--border);
+  padding: var(--space-6) 0 var(--space-4);
+  margin-top: var(--space-6);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+}
+
+@media (min-width: 768px) {
+  .footer-grid { grid-template-columns: 2fr 1fr 1fr; }
+}
+
+.footer-brand h3 { margin-bottom: var(--space-2); }
+.footer-brand p { color: var(--fg-muted); font-size: 0.9375rem; }
+
+.footer-links h4 { font-size: 0.9375rem; margin-bottom: var(--space-3); }
+.footer-links ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--space-2); }
+.footer-links a { color: var(--fg-muted); font-size: 0.9375rem; }
+.footer-links a:hover { color: var(--accent); }
+
+.footer-bottom {
+  margin-top: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border);
+  text-align: center;
+  color: var(--fg-muted);
+  font-size: 0.875rem;
+}
+
+/* Scroll Reveal Animations */
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s var(--transition), transform 0.6s var(--transition); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* Skip Link */
+.skip-link {
+  position: absolute; top: -100%; left: 50%; transform: translateX(-50%);
+  background: var(--accent); color: #fff; padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius); z-index: 1000; font-weight: 500;
+}
+.skip-link:focus { top: var(--space-3); }
+
+/* Loading States */
+.loading { opacity: 0.5; pointer-events: none; }
+.skeleton {
+  background: linear-gradient(90deg, var(--border) 25%, var(--bg) 50%, var(--border) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--radius);
+}
+
+@keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+
+/* Utility */
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<header class="site-header" id="header" role="banner">
+  <div class="container nav-wrapper">
+    <a href="#" class="logo" aria-label="Arignar Anna Zoological Park - Home">Arignar Anna Zoological Park</a>
+    <nav class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
+      <a href="#about" class="active">About</a>
+      <a href="#wildlife">Wildlife</a>
+      <a href="#map">Map</a>
+      <a href="#reflection">Reflection</a>
+    </nav>
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileNav">
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="mobile-nav" id="mobileNav" role="navigation" aria-label="Mobile navigation">
+  <a href="#about">About the Visit</a>
+  <a href="#wildlife">Discover Wildlife</a>
+  <a href="#map">Explore the Zoo</a>
+  <a href="#reflection">Reflection</a>
+</nav>
+
+<main id="main" role="main">
+  <!-- Hero Section -->
+  <section class="hero" aria-labelledby="hero-title">
+    <video class="hero-video" autoplay muted loop playsinline poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Crect fill='%23e8e4dc' width='1920' height='1080'/%3E%3C/svg%3E">
+      <source src="AAPZ_Web.webm" type="video/webm">
+    </video>
+    <div class="hero-content container">
+      <div class="hero-badge">Arignar Anna Zoological Park • Vandalur, Tamil Nadu</div>
+      <h1 id="hero-title">A Walk Through the Wild</h1>
+      <p class="lead">An educational journey documenting the incredible biodiversity of South Asia's largest zoological park.</p>
+      <div class="hero-actions">
+        <a href="#wildlife" class="btn btn-primary">Explore Wildlife</a>
+        <a href="#about" class="btn btn-secondary">About My Visit</a>
+      </div>
+    </div>
+    <div class="scroll-indicator" aria-hidden="true">
+      <span>Scroll to explore</span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 5v14M19 12l-7 7-7-7"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- About Section -->
+    <section id="about" class="section reveal" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="about-title">About Arignar Anna Zoological Park</h2>
+          <p>Discover the history, mission, and conservation legacy of South Asia's largest zoological park.</p>
+        </div>
+        <div class="about-grid">
+          <div class="about-image">
+            <img src="Blue-and-yellow Macaw 5.jpg" alt="Blue-and-yellow Macaw at Arignar Anna Zoological Park" loading="lazy">
+          </div>
+          <div class="about-text">
+            <h3>About AAZP</h3>
+            <p>Arignar Anna Zoological Park (AAZP), popularly known as Vandalur Zoo, is one of the largest and most scientifically managed zoological parks in India. Spread across 602 hectares of protected reserve forest in Vandalur, Chennai, Tamil Nadu, the park was established in 1855 as the Madras Zoo — making it the first public zoo in India. In 1985, it was relocated to its current expansive campus within the Vandalur Reserve Forest, and renamed in honor of former Tamil Nadu Chief Minister Arignar Anna.</p>
+            <p>Today, AAZP is home to over 2,500 animals across 170+ species of mammals, birds, reptiles, amphibians, and fish. The park operates under the Central Zoo Authority (CZA) and is recognized as a "Large Category Zoo" for its scientific management, conservation breeding programs, and research initiatives. Its naturalistic enclosures are designed to mimic native habitats, spanning open moated exhibits, walk-through aviaries, nocturnal houses, and specialized breeding centers.</p>
+            <p>AAZP is a global leader in ex-situ conservation, participating in coordinated breeding programs for critically endangered species including the Lion-tailed Macaque, Nilgiri Langur, Bengal Tiger, Indian Rhinoceros, Great Indian Bustard, and Gharial. The park's veterinary hospital, rescue and rehabilitation center, and conservation research laboratory support wildlife health, disease surveillance, and reintroduction efforts. As an education hub, AAZP welcomes over 2 million visitors annually and runs nature camps, zoo schools, and outreach programs to inspire conservation awareness.</p>
+            <div class="stats">
+              <div class="stat"><span class="stat-number" data-target="170">0</span><span class="stat-label">Species</span></div>
+              <div class="stat"><span class="stat-number" data-target="602">0</span><span class="stat-label">Hectares</span></div>
+              <div class="stat"><span class="stat-number" data-target="2500">0</span><span class="stat-label">Animals</span></div>
+              <div class="stat"><span class="stat-number" data-target="1">0</span><span class="stat-label">Day Visit</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wildlife Gallery Section -->
+  <section id="wildlife" class="section reveal" aria-labelledby="wildlife-title">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="wildlife-title">Discover the Wildlife</h2>
+        <p>Click any animal card to view detailed profiles, additional photographs, and conservation information.</p>
+      </div>
+      <div class="wildlife-grid" id="wildlifeGrid" role="list" aria-label="Animal species gallery">
+        <!-- Animal cards will be inserted by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section id="map" class="section reveal" aria-labelledby="map-title">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="map-title">Explore the Zoo</h2>
+        <p>Navigate the layout of Arignar Anna Zoological Park. The official map helps visitors plan their route through the various enclosures and facilities.</p>
+      </div>
+      <div class="map-container">
+        <img src="map_extracted-000.png" alt="Arignar Anna Zoological Park Map" loading="lazy" style="width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--border);">
+      </div>
+      <p style="margin-top: var(--space-3); text-align: center; color: var(--fg-muted); font-size: 0.875rem;">
+        Source: Official Arignar Anna Zoological Park Map (2023). If the image does not display, <a href="map_extracted-000.png" download>download it directly</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- Reflection Section -->
+  <section id="reflection" class="section reveal" aria-labelledby="reflection-title">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="reflection-title">Reflection</h2>
+        <p>Thoughts on wildlife, conservation, and the role of zoological parks in education and species preservation.</p>
+      </div>
+      <div class="reflection">
+        <blockquote>
+          "Walking through Arignar Anna Zoological Park, I was reminded that every enclosure represents not just an animal on display, but a species with a complex history, a fragile present, and an uncertain future. The park's work in conservation breeding — particularly for endemic Western Ghats species like the Lion-tailed Macaque and Nilgiri Langur — demonstrates how modern zoos have evolved from mere menageries into vital arks for biodiversity."
+        </blockquote>
+        <cite>— Personal reflection, September 2026</cite>
+      </div>
+      <div style="margin-top: var(--space-5); display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-4);">
+        <div>
+          <h4 style="margin-bottom: var(--space-2);">What I Learned</h4>
+          <ul style="margin: 0; padding-left: var(--space-4); color: var(--fg-muted); line-height: 2;">
+            <li>Zoos play a critical role in ex-situ conservation and species recovery programs</li>
+            <li>The Western Ghats is a biodiversity hotspot with many endemic species under threat</li>
+            <li>Habitat loss and human-wildlife conflict are primary drivers of population decline</li>
+            <li>Public education through direct observation fosters conservation awareness</li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="margin-bottom: var(--space-2);">Conservation Status Key</h4>
+          <ul style="margin: 0; padding-left: var(--space-4); color: var(--fg-muted); line-height: 2;">
+            <li><strong>CR</strong> — Critically Endangered</li>
+            <li><strong>EN</strong> — Endangered</li>
+            <li><strong>VU</strong> — Vulnerable</li>
+            <li><strong>NT</strong> — Near Threatened</li>
+            <li><strong>LC</strong> — Least Concern</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Arignar Anna Zoological Park</h3>
+        <p>GST Road, Vandalur, Chennai, Tamil Nadu 600048, India. This website is a student project for an English Digital Assignment, documenting a personal educational visit.</p>
+      </div>
+      <nav class="footer-links" aria-label="Quick links">
+        <h4>Sections</h4>
+        <ul>
+          <li><a href="#about">About the Visit</a></li>
+          <li><a href="#wildlife">Wildlife Gallery</a></li>
+          <li><a href="#map">Park Map</a></li>
+          <li><a href="#reflection">Reflection</a></li>
+        </ul>
+      </nav>
+      <div class="footer-links">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="https://www.aazp.in/" target="_blank" rel="noopener">Official AAZP Website</a></li>
+          <li><a href="https://www.cza.gov.in/" target="_blank" rel="noopener">Central Zoo Authority</a></li>
+          <li><a href="https://www.iucnredlist.org/" target="_blank" rel="noopener">IUCN Red List</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Educational Project. All photographs taken during personal visit. Animal descriptions compiled from IUCN Red List, CZA publications, and zoo signage.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Animal Modal -->
+<div class="modal-overlay" id="animalModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+  <div class="modal">
+    <button class="modal-close" id="modalClose" aria-label="Close animal profile">&times;</button>
+    <div class="modal-header">
+      <img id="modalMainImage" src="" alt="">
+    </div>
+    <div class="modal-body">
+      <div class="modal-title">
+        <h3 id="modalTitle"></h3>
+        <div class="modal-meta" id="modalMeta"></div>
+      </div>
+      <p id="modalDescription" class="modal-description"></p>
+      <div class="modal-gallery" id="modalGallery" role="list" aria-label="Additional photographs"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ============================================
+// ANIMAL DATA - Curated from verified photographs
+// ============================================
+const animalData = {
+  "Indian Peafowl": {
+    scientific: "Pavo cristatus",
+    status: "LC",
+    family: "Phasianidae",
+    description: "The Indian Peafowl, commonly known as the peacock (male) or peahen (female), is the national bird of India. Males are renowned for their spectacular iridescent tail feathers (train) used in courtship displays. Native to the Indian subcontinent, they inhabit deciduous forests, scrublands, and agricultural areas. Omnivorous, feeding on seeds, insects, small reptiles, and fruits. During my visit, I observed multiple males displaying near the bird enclosures, their trains shimmering in the morning light.",
+    images: ["Indian Peafowl.jpg", "Indian Peafowl 2.jpg", "Indian Peafowl 3.jpg", "Indian Peafowl 4.jpg", "Indian Peafowl 5.jpg", "Indian Peafowl 6.jpg", "Indian Peafowl 7.jpg", "Indian Peafowl 8.jpg", "Indian Peafowl 9.jpg", "Indian Peafowl 10.jpg", "Indian Peafowl 11.jpg"]
+  },
+  "White Peafowl": {
+    scientific: "Pavo cristatus (leucistic variant)",
+    status: "LC",
+    family: "Phasianidae",
+    description: "A leucistic color variant of the Indian Peafowl, not a separate species or albino. Leucism causes partial loss of pigmentation, resulting in pure white plumage while retaining normal eye color. These birds share the same behavior and ecology as their blue counterparts. At the zoo, they were housed alongside the standard Indian Peafowl, creating a striking visual contrast.",
+    images: ["White Peafowl.jpg", "White Peafowl 2.jpg", "White Peafowl1.jpg"]
+  },
+  "Lion-tailed Macaque": {
+    scientific: "Macaca silenus",
+    status: "EN",
+    family: "Cercopithecidae",
+    description: "Endemic to the Western Ghats, the Lion-tailed Macaque is one of the world's most endangered primates (~3,500 mature individuals). Named for its distinctive silver-white mane surrounding a dark face and tufted tail. Arboreal, living in tropical rainforest canopies (300-1,500 m elevation), feeding on fruits, seeds, insects, and small vertebrates. Diurnal, group size 10-20. The zoo participates in a conservation breeding program for this species — part of the Central Zoo Authority's Species Recovery Plan. I observed a small troop foraging and grooming — their expressive faces and social interactions were a highlight of my visit. Unique among macaques: avoid human settlements; requires intact rainforest corridors. Conservation: CITES Appendix I; <4,000 km² remaining habitat; threatened by habitat fragmentation (tea/coffee plantations), roads, and electrocution.",
+    images: ["Lion-tailed Macaque.jpg", "Lion-tailed Macaque 2.jpg", "Lion-tailed Macaque 3.jpg", "Lion-tailed Macaques.jpg"]
+  },
+  "Macaque": {
+    scientific: "Macaca mulatta (likely Rhesus Macaque)",
+    status: "LC",
+    family: "Cercopithecidae",
+    description: "The macaques observed at the zoo are likely Rhesus Macaques, widespread across South and Southeast Asia. Highly adaptable, they inhabit forests, grasslands, and urban areas. Omnivorous and social, living in multi-male, multi-female troops. At the zoo, a large troop was active near the primate section, with juveniles playing and adults foraging.",
+    images: ["Macaque.jpg", "Macaques.jpg", "Macaques1.jpg", "Macaques2.jpg"]
+  },
+  "Bengal Tiger": {
+    scientific: "Panthera tigris tigris",
+    status: "EN",
+    family: "Felidae",
+    description: "The Bengal Tiger is the most numerous tiger subspecies, yet still endangered with fewer than 3,500 individuals in the wild. Native to India, Bangladesh, Nepal, and Bhutan. Apex predators requiring large territories (20-100 km²). Each tiger has a unique stripe pattern — like human fingerprints — used for individual identification in camera-trap surveys. Tigers are excellent swimmers and can cross rivers up to 7 km wide. The zoo houses Bengal Tigers in spacious, naturalistic enclosures with pools. I was fortunate to observe a tiger swimming — a behavior tigers genuinely enjoy, unlike most cats. The White Tiger variant (a leucistic form, not albino) was also present; it results from a recessive allele in the SLC45A2 gene. Conservation: India's Project Tiger (launched 1973) established 53 reserves; Vandalur participates in the Central Zoo Authority's conservation breeding program.",
+    images: ["Bengal Tiger.jpg", "Bengal Tiger 2.jpg", "Bengal Tiger 3.jpg", "White Tiger.jpg", "White Tiger 2.jpg", "White Tiger 3.jpg", "Tiger.jpg", "tiger.jpg"]
+  },
+  "Asian Elephant": {
+    scientific: "Elephas maximus",
+    status: "EN",
+    family: "Elephantidae",
+    description: "The Asian Elephant is smaller than its African cousin (shoulder height 2.4-3.0 m vs 3.2-4.0 m), with smaller ears, a convex back, and a single prehensile 'finger' on the trunk tip (African elephants have two). Native to mainland Southeast Asia and the Indian subcontinent. Highly intelligent — brain mass ~5 kg, encephalization quotient 1.7-2.0 — with documented tool use, self-awareness (mirror test), and complex grief rituals. Social, living in matriarchal herds of 6-20 females and calves; bulls disperse at adolescence. The zoo's elephant enclosure includes a large pool for bathing. I observed them using their trunks to spray water and dust — essential for thermoregulation and skin care. Trunk has ~40,000 muscles, capable of lifting 300 kg or picking up a peanut. Conservation: Listed under CITES Appendix I; India's Project Elephant (1992) protects corridors; Vandalur participates in ex-situ breeding.",
+    images: ["Asian Elephant.jpg", "Asian Elephant 2.jpg", "Asian Elephant 3.jpg"]
+  },
+  "Indian Gaur": {
+    scientific: "Bos gaurus",
+    status: "VU",
+    family: "Bovidae",
+    description: "The Gaur (Indian Bison) is the largest wild cattle species (shoulder height up to 2.2 m, males up to 1,500 kg). Males are massive, dark brown to black with a distinctive muscular dorsal ridge and white 'stockings' on the lower legs; females lighter brown. Native to South and Southeast Asia. Graze on grasses, browse on leaves, and visit salt licks. Ruminant with 4-chambered stomach; can digest coarse forage. The zoo's herd was impressive — watching these massive bovines move with surprising grace through their enclosure was memorable. Gaur are ecosystem engineers: their grazing maintains grassland heterogeneity. Conservation: Protected under Schedule I of India's Wildlife Protection Act; threatened by habitat fragmentation, disease from domestic cattle (rinderpest, foot-and-mouth), and poaching for trophies.",
+    images: ["Indian Gaur.jpg", "Indian Gaur 2.jpg", "Indian Gaur 3.jpg", "Indian Gaur 4.jpg", "Indian Gaur 5.jpg", "Indian Gaur 6.jpg"]
+  },
+  "Sambar and Spotted Deer": {
+    scientific: "Rusa unicolor & Axis axis",
+    status: "LC / VU (Sambar VU)",
+    family: "Cervidae",
+    description: "Two deer species often seen together in mixed herds at the zoo. The Sambar is India's largest deer, with coarse brown coat and impressive antlers on males. The Spotted Deer (Chital) is smaller with a beautiful golden coat marked with white spots. Both are important prey species for tigers and leopards. At the zoo, they share a large, grassy enclosure mimicking their natural habitat.",
+    images: ["Sambar and Spotted Deer.jpg", "Sambar and Spotted Deer 2.jpg", "Sambar and Spotted Deer 3.jpg", "Sambar and Spotted Deer 4.jpg"]
+  },
+  "Spotted Deer": {
+    scientific: "Axis axis",
+    status: "LC",
+    family: "Cervidae",
+    description: "Also called Chital, the Spotted Deer is one of India's most common and beautiful deer. Golden-rufous coat with white spots persists throughout life. Males grow three-tined antlers shed annually. Highly social, forming herds of 10-50 individuals. Often associate with langurs, benefiting from fruit dropped by monkeys and alarm calls. Abundant at the zoo, frequently seen grazing peacefully.",
+    images: ["Spotted Deer.jpg", "Spotted Deer 2.jpg", "Spotted Deer 3.jpg", "Spotted Deer 4.jpg", "Spotted Deer 5.jpg", "Spotted Deer 6.jpg", "Spotted Deer 7.jpg", "Spotted Deer 8.jpg", "Spotted Deer 9.jpg", "Spotted Deer with Peafowl.jpg"]
+  },
+  "Sloth Bear": {
+    scientific: "Melursus ursinus",
+    status: "VU",
+    family: "Ursidae",
+    description: "Distinctive shaggy black coat with a cream-colored V- or Y-shaped chest mark. Long, curved claws (up to 10 cm) for digging termite mounds; specialized lips and palate (palatal gap) for sucking up insects — can close nostrils voluntarily. Native to the Indian subcontinent. Nocturnal and solitary (except mothers with cubs). The zoo's sloth bears were active in the late afternoon, demonstrating their characteristic vacuum-like feeding on termite mounds provided by keepers. Excellent climbers — cubs ride on mother's back (unique among bears). Diet: 90% termites/ants; also fruits, honey. Myrmecophagous adaptations: no upper incisors, long snout, protrusible lips. Conservation: ~20,000 left; threatened by habitat loss, poaching for bile/gallbladder (TCM), and human-bear conflict. Dancing bears banned 2009; Vandalur houses rescued individuals.",
+    images: ["Sloth Bear.jpg", "Sloth Bear 2.jpg", "Sloth Bear 3.jpg", "Sloth Bear 4.jpg", "Sloth Bear 5.jpg"]
+  },
+  "Himalayan Black Bear": {
+    scientific: "Ursus thibetanus laniger",
+    status: "VU",
+    family: "Ursidae",
+    description: "Also called the Asiatic Black Bear or Moon Bear, distinguished by a prominent white crescent chest mark. More arboreal than other bears, with strong curved claws for climbing. Omnivorous diet: fruits, nuts, insects, small mammals. The zoo's bears were in a forested enclosure with climbing structures. I watched one expertly scale a tall tree for fruit.",
+    images: ["Himalayan Black Bear.jpg", "Himalayan Black Bear 2.jpg", "Himalayan Black Bear 3.jpg", "Himalayan Black Bear 4.jpg", "Himalayan Black Bear 5.jpg"]
+  },
+  "Bear": {
+    scientific: "Ursidae (species uncertain)",
+    status: "Unknown",
+    family: "Ursidae",
+    description: "Several bear photographs could not be definitively identified to species level. They may represent Sloth Bears, Himalayan Black Bears, or other ursids present at the zoo. Included here as documented observations pending verification.",
+    images: ["Bear.jpg", "Bear 2.jpg", "Bear 3.jpg", "Bear 4.jpg"]
+  },
+  "Indian Rhinoceros": {
+    scientific: "Rhinoceros unicornis",
+    status: "VU",
+    family: "Rhinocerotidae",
+    description: "The Greater One-horned Rhinoceros, native to the Indian subcontinent's grasslands and swamps. Single black horn (20-60 cm, made of compressed keratin, not bone), thick silver-brown skin with rivet-like folds giving an armored appearance (up to 4 cm thick). Once reduced to <200 individuals (early 1900s); conservation efforts have recovered the population to ~4,000 (2022). Excellent swimmers — can dive and feed underwater. The zoo's rhinos wallowed in mud pools — essential for temperature regulation, insect protection, and skin health. Rhino horn is not medically valuable (keratin, like fingernails); poaching driven by myth. Conservation: India's Rhino Vision 2020 translocated rhinos to new parks; Kaziranga NP holds ~2,600. Vandalur participates in CZA's breeding program; rhinos are ecosystem engineers maintaining grassland mosaics.",
+    images: ["Indian Rhinoceros.jpg", "Indian Rhinoceros 2.jpg", "Indian Rhinoceros 3.jpg", "Indian Rhinoceros 4.jpg"]
+  },
+  "Hippopotamus": {
+    scientific: "Hippopotamus amphibius",
+    status: "VU",
+    family: "Hippopotamidae",
+    description: "The Common Hippopotamus, native to sub-Saharan Africa. Semi-aquatic, spending days submerged in water to stay cool and protect sensitive skin (secretes 'blood sweat' — red hipposudoric acid, natural sunscreen/antibiotic). Emerge at night to graze on grasses (up to 68 kg/night). Despite their bulk (1,500-3,000 kg), they are agile in water (walk on bottom, can't swim) and can run 30 km/h on land. The zoo's hippos were mostly submerged, with only eyes, ears, and nostrils visible — classic hippo behavior. Powerful jaws open 150°; can crush crocodiles. Territorial in water (males defend 250 m stretches); aggressive — kill ~500 people/year in Africa. Calves born underwater, swim immediately. Conservation: ~115,000 left; threatened by habitat loss, poaching for ivory (canines), and human-wildlife conflict. Vandalur's pool mimics natural riverine habitat.",
+    images: ["Hippopotamus.jpg", "Hippopotamus 2.jpg", "Hippopotamus 3.jpg", "Nile-Hippopotamus.jpg", "Nile-Hippopotamus1.jpg"]
+  },
+  "Giraffe": {
+    scientific: "Giraffa camelopardalis",
+    status: "VU",
+    family: "Giraffidae",
+    description: "The world's tallest terrestrial animal (males up to 5.5 m, females 4.5 m). Long neck (7 cervical vertebrae, same as humans — each elongated to 25 cm). Distinctive coat patterns unique to each individual (like fingerprints) — provides camouflage in dappled light. Browse on acacia leaves using 45-cm prehensile, purple-black tongue (melanin protects from sunburn) and tough lips. The zoo's giraffes were in a spacious enclosure with feeding platforms at height. Their gentle demeanor and graceful movements captivated visitors. Cardiovascular marvel: heart ~11 kg, BP 280/180 mmHg; valves in jugular prevent brain hemorrhage when lowering head. Sleep <2 hours/day in short bouts. Conservation: 'Silent extinction' — declined 40% in 30 years (habitat loss, poaching, civil unrest); 4 species proposed. Vandalur's giraffes part of international studbook.",
+    images: ["Giraffe.jpg", "Giraffe 2.jpg", "Giraffe 3.jpg", "Giraffe 4.jpg"]
+  },
+  "Lion": {
+    scientific: "Panthera leo",
+    status: "VU",
+    family: "Felidae",
+    description: "The only truly social cat, living in prides of related females, offspring, and a coalition of males (typically 2-4). Native to Africa (and historically Gir Forest, India for Asiatic Lion — Panthera leo persica, ~650 left). Apex predators; females do most hunting cooperatively (success rate ~30%). Males defend territory and cubs from infanticidal rivals. Roar audible up to 8 km — advertises territory. The zoo houses both African and Asiatic lions. I observed a male and lioness resting in shade — lions sleep up to 20 hours daily. Male mane signals fitness: darker, fuller manes = higher testosterone, better nutrition, preferred by females. Conservation: African lions declined 43% in 21 years (habitat loss, human-wildlife conflict, prey depletion); Asiatic Lion restricted to Gir. Vandalur's lions part of CZA's managed breeding.",
+    images: ["Lion.jpg", "Lion 2.jpg", "Lion 3.jpg", "Lion-lioness.jpg"]
+  },
+  "Cassowary": {
+    scientific: "Casuarius casuarius",
+    status: "LC",
+    family: "Casuariidae",
+    description: "The Southern Cassowary, native to New Guinea and northern Australia. Flightless ratite with glossy black feathers, bright blue neck, red wattles, and a prominent casque (helmet-like crest) on the head. Powerful legs with dagger-like inner claw. Keystone seed dispersers for rainforest trees. The zoo's cassowary was in a heavily vegetated enclosure — its prehistoric appearance was striking.",
+    images: ["Cassowary.jpg", "Cassowary 2.jpg", "Cassowary 3.jpg"]
+  },
+  "Emu": {
+    scientific: "Dromaius novaehollandiae",
+    status: "LC",
+    family: "Dromaiidae",
+    description: "Australia's largest native bird, second-tallest in the world after the ostrich. Soft brown feathers, long neck, powerful legs for running up to 50 km/h. Males incubate eggs and rear chicks alone. The zoo had multiple emus, including a rare white individual (leucistic) alongside normal-colored birds. Their curious nature brought them close to the viewing fence.",
+    images: ["Emu.jpg", "Emu 2.jpg", "Emu 3.jpg", "Emu 4.jpg", "Emu 5.jpg", "Emu 6.jpg", "Emu 7.jpg", "Emu 8.jpg", "Emu with White Bird.jpg", "Emu with White Bird 2.jpg", "ostrich.jpg", "ostrich1.jpg", "Ostrich.jpg", "Ostrich 2.jpg", "Ostrich 3.jpg"]
+  },
+  "Ostrich": {
+    scientific: "Struthio camelus",
+    status: "LC",
+    family: "Struthionidae",
+    description: "The world's largest and heaviest bird, native to Africa. Flightless with powerful legs (can kill a lion with a kick), two-toed feet, and largest eyes of any land vertebrate. Males black with white wings/tail; females gray-brown. The zoo's ostriches were in a large paddock, demonstrating their incredible running speed when startled.",
+    images: ["Ostrich.jpg", "Ostrich 2.jpg", "Ostrich 3.jpg", "ostrich.jpg", "ostrich1.jpg"]
+  },
+  "Adjutant Stork": {
+    scientific: "Leptoptilos dubius (Greater) / Leptoptilos javanicus (Lesser)",
+    status: "EN (Greater) / VU (Lesser)",
+    family: "Ciconiidae",
+    description: "Large, ungainly-looking storks with massive bills (25-30 cm), bare head/neck (thermoregulation), and a pendulous throat pouch (gular sac) for display and cooling. Greater Adjutant (EN, ~1,200 left) critically endangered; Lesser Adjutant (VU) vulnerable. Scavengers and opportunistic feeders: carrion, fish, frogs, small mammals, garbage. The zoo's adjutants were impressive in stature (1.5 m tall), often standing motionless for long periods before striking at prey. Unique cooling: defecate on legs (urohydrosis). Greater Adjutant once common in Calcutta's dumps; now restricted to Assam (breeding colonies). Conservation: Greater Adjutant restricted to Assam/Bihar; breeding colonies protected; community-based 'Hargila Army' conservation in Assam. Vandalur houses both species.",
+    images: ["Adjutant Stork.jpg", "Adjutant Stork 2.jpg", "Adjutant Stork 3.jpg", "Adjutant Stork 4.jpg", "Adjutant Stork 5.jpg", "Adjutant Stork 6.jpg", "Adjutant Stork 7.jpg", "Adjutant Stork 8.jpg", "Adjutant Stork 9.jpg", "Adjutant-Stroke.jpg", "Adjutant-Stroke1.jpg", "adjutant-stork.jpg", "Adjutant Stork.jpg"]
+  },
+  "Painted Stork": {
+    scientific: "Mycteria leucocephala",
+    status: "LC",
+    family: "Ciconiidae",
+    description: "Medium-sized stork with distinctive pink tertial feathers, black breast band, and long yellow bill (tactile foraging — sweeps bill side-to-side in water). Found in wetlands across South and Southeast Asia. Colonial nesters, often with other waterbirds (herons, ibises, cormorants) — mixed colonies up to 1,000 pairs. Nest: stick platform in trees near water; both parents incubate 3-4 eggs. The zoo's painted storks were in a wetland enclosure, their pink plumage vivid against the green backdrop. Pink color from carotenoid diet (crustaceans). Tactile feeding: bill snaps shut in 25 ms when prey touches sensitive nerve endings. Conservation: once threatened by wetland loss; now stable due to protection of nesting colonies (e.g., Vedanthangal, Kokrebellur). Vandalur's colony part of regional wetland bird program.",
+    images: ["Painted Stork.jpg", "Painted Stork 2.jpg", "Painted Stork 3.jpg"]
+  },
+  "Sarus Crane": {
+    scientific: "Antigone antigone",
+    status: "VU",
+    family: "Gruidae",
+    description: "The world's tallest flying bird, standing up to 1.8 m (5'11\") with 2.4 m wingspan. Gray plumage, bare red head and upper neck, long red legs. Non-migratory, resident in Indian wetlands, rice paddies, and agricultural fields. Famous for lifelong pair bonds and elaborate courtship dances (bowing, jumping, wing-flapping) with synchronized unison calls — a haunting, trumpeting duet audible up to 5 km. The zoo's pair performed a duet call that carried across the park. Cultural icon in India: symbol of marital fidelity; associated with goddess Saraswati. Omnivorous: tubers, grains, insects, frogs, snakes. Conservation: ~25,000 left; threatened by wetland drainage, pesticide poisoning, power-line collisions. India's stronghold: Uttar Pradesh holds >50% population. Vandalur's pair part of CZA breeding program.",
+    images: ["Sarus Crane.jpg", "Sarus Crane 2.jpg", "Sarus Crane 3.jpg", "Sarus Crane 4.jpg", "Sarus Crane 5.jpg", "Sarus Crane 6.jpg"]
+  },
+  "Blue-and-yellow Macaw": {
+    scientific: "Ara ararauna",
+    status: "LC",
+    family: "Psittacidae",
+    description: "Large neotropical parrot with brilliant blue upperparts, yellow underparts, green forehead, and black beard. Native to South American forests. Highly intelligent, social, long-lived (60+ years). Powerful beak for cracking nuts. The zoo's macaws were vocal and interactive, demonstrating their remarkable dexterity with feet and beak.",
+    images: ["Blue-and-yellow Macaw.jpg", "Blue-and-yellow Macaw 2.jpg", "Blue-and-yellow Macaw 3.jpg", "Blue-and-yellow Macaw 4.jpg", "Blue-and-yellow Macaw 5.jpg", "Blue-and-yellow Macaw 6.jpg", "Blue-and-yellow Macaw 7.jpg", "macaw.jpg"]
+  },
+  "African Grey Parrot": {
+    scientific: "Psittacus erithacus",
+    status: "EN",
+    family: "Psittacidae",
+    description: "Renowned for exceptional cognitive abilities and mimicry skills. Gray plumage, bright red tail, white mask around eyes. Native to Central/West African rainforests. Threatened by pet trade and habitat loss. The zoo's individual was in a enriched aviary with puzzle feeders.",
+    images: ["African Grey Parrot.jpg"]
+  },
+  "Cockatoo": {
+    scientific: "Cacatua spp.",
+    status: "Varies",
+    family: "Cacatuidae",
+    description: "Crested parrots native to Australasia. The zoo houses several species, likely including Sulphur-crested Cockatoo. Highly social, intelligent, with expressive crests raised in excitement or alarm. Their loud, raucous calls echoed through the bird section.",
+    images: ["Cockatoo.jpg", "Cockatoo 2.jpg", "peafowl.jpg", "peafowl1.jpg"]
+  },
+  "Cockatiel": {
+    scientific: "Nymphicus hollandicus",
+    status: "LC",
+    family: "Cacatuidae",
+    description: "Small Australian cockatoo, popular in aviculture. Gray body, yellow face, orange cheek patches, erectile crest. Nomadic flock birds in arid regions. The zoo's cockatiels were in a walk-through aviary, allowing close observation of their gentle nature.",
+    images: ["Cockatiel.jpg"]
+  },
+  "Alexandrine Parakeet": {
+    scientific: "Psittacula eupatria",
+    status: "NT",
+    family: "Psittaculidae",
+    description: "Large parakeet named after Alexander the Great. Green plumage, red beak, maroon shoulder patch, and distinctive pink/black neck ring in males. Native to South/Southeast Asia. The zoo's birds were in a large flight aviary, their long tails streaming behind them in flight.",
+    images: ["Alexandrine Parakeet.jpg"]
+  },
+  "Parakeet": {
+    scientific: "Psittacula spp.",
+    status: "Varies",
+    family: "Psittaculidae",
+    description: "Several parakeet species were present at the zoo, including Rose-ringed and Plum-headed Parakeets. Slender, long-tailed parrots with distinctive neck rings in males. Highly social, forming noisy flocks.",
+    images: ["Parakeet.jpg", "Parakeets.jpg"]
+  },
+  "Parrot": {
+    scientific: "Psittaciformes",
+    status: "Varies",
+    family: "Psittacidae",
+    description: "A dark grey/black parrot with red undertail coverts observed at the zoo — possibly a Red-tailed Amazon or similar species. Exact identification uncertain from photographs alone.",
+    images: ["Parrot.jpg"]
+  },
+  "Sun Conure": {
+    scientific: "Aratinga solstitialis",
+    status: "EN",
+    family: "Psittacidae",
+    description: "Brilliant yellow-orange plumage with green wings and tail. Native to northeastern South America. Highly social, loud, and playful. Endangered due to trapping for pet trade. The zoo's sun conures were in a mixed-species aviary, their colors like living sunshine.",
+    images: ["Sun Conure.jpg", "Sun Conure 2.jpg", "Sun Conure 3.jpg"]
+  },
+  "Python": {
+    scientific: "Python molurus (Indian Rock Python)",
+    status: "NT",
+    family: "Pythonidae",
+    description: "India's largest snake (up to 6 m, 90 kg). Non-venomous constrictor; kills by cardiac arrest (stops blood flow, not suffocation). Heat-sensing labial pits detect 0.003°C differences. Native to Indian subcontinent — grasslands, swamps, rocky foothills, forests. Semi-aquatic; can remain submerged 30 min. Females exhibit maternal care: coil 10-50 eggs, shiver to generate heat (~7°C above ambient) for 60-80 day incubation. The enclosure design allowed close viewing of their beautiful blotched patterns — a highlight for reptile enthusiasts. Conservation: threatened by skin trade, habitat loss, persecution. Protected under Schedule I of India's Wildlife Protection Act. Vandalur participates in CZA breeding program.",
+    images: ["Python.jpg", "Python 2.jpg", "Python 3.jpg", "Python 4.jpg", "Python 5.jpg", "Python 6.jpg", "Python 7.jpg", "Python 8.jpg", "snake2.jpg", "snake.jpg"]
+  },
+  "Crocodile": {
+    scientific: "Crocodylus palustris (Mugger) / Crocodylus porosus (Saltwater)",
+    status: "VU / LC",
+    family: "Crocodylidae",
+    description: "The zoo houses Mugger Crocodiles (marsh crocodiles) native to the Indian subcontinent. Broad snout, armored body (osteoderms), powerful tail. Ambush predators; can remain motionless for hours. Can gallop short distances (17 km/h). Temperature-dependent sex determination. The enclosure design allowed underwater viewing — watching them glide silently beneath the surface was eerie and captivating. Saltwater crocodile (largest reptile, up to 7 m) in separate enclosure. Conservation: Mugger recovered from near-extinction (1970s); CITES Appendix I/II. Vandalur's crocs part of CZA breeding program.",
+    images: ["Crocodile.jpg", "Crocodile 2.jpg", "Crocodile 3.jpg", "Crocodile 4.jpg"]
+  },
+  "Green Iguana": {
+    scientific: "Iguana iguana",
+    status: "LC",
+    family: "Iguanidae",
+    description: "Large arboreal lizard native to Central/South America (introduced in Florida, Hawaii, etc.). Despite the name, color ranges from green to orange, blue, or gray. Dewlap under chin (thermoregulation, display), row of spines along back and tail, parietal eye (photosensitive). Herbivorous: leaves, flowers, fruit; hindgut fermenters. Excellent swimmers; can stay submerged 30 min. The zoo's iguanas basked under heat lamps, displaying their impressive dorsal crests. Tail autotomy (regrows). Popular in pet trade; invasive in many regions. Conservation: native populations declining due to hunting and habitat loss.",
+    images: ["Green Iguana.jpg", "Green Iguana 2.jpg", "Green Iguana 3.jpg", "reptiles.jpg"]
+  },
+  "Monitor Lizard": {
+    scientific: "Varanus bengalensis (Bengal Monitor)",
+    status: "LC",
+    family: "Varanidae",
+    description: "Large terrestrial lizard native to South/Southeast Asia. Long neck, forked tongue (chemosensory), powerful claws, strong tail (defense, balance). Opportunistic carnivores: insects, eggs, small mammals, carrion. Intelligent — can count, solve problems, recognize keepers. The zoo's monitor was in a naturalistic enclosure with burrows and climbing logs — I watched it methodically explore every corner. Metabolic rate higher than other reptiles; active forager. Conservation: threatened by skin trade, habitat loss, persecution. Protected under Schedule I of India's Wildlife Protection Act. Vandalur monitors part of CZA program.",
+    images: ["Monitor Lizard.jpg"]
+  },
+  "Yellow Anaconda": {
+    scientific: "Eunectes notaeus",
+    status: "Not Evaluated",
+    family: "Boidae",
+    description: "South American constrictor, smaller than the Green Anaconda. Yellow-tan with black blotches. Semi-aquatic, inhabiting swamps and slow-moving rivers. The zoo's pair was in a heated aquatic enclosure.",
+    images: ["Yellow Anaconda.jpg", "Yellow Anaconda 2.jpg"]
+  },
+  "Egyptian Vulture": {
+    scientific: "Neophron percnopterus",
+    status: "EN",
+    family: "Accipitridae",
+    description: "Small Old World vulture (wingspan 1.7 m). White plumage, black flight feathers, yellow bare face, distinctive wedge-shaped tail. Only vulture species known to use tools: drops stones to break ostrich eggs (learned behavior, not instinct). Feeds on carrion, small mammals, birds, eggs, feces. Highly adaptable: follows pastoralists, scavenges at dumps. The zoo's vultures were in a large raptor aviary. Conservation: ~12,000-38,000 left; declined 50% in 3 generations (NSAID poisoning — diclofenac, lead, electrocution, habitat loss). Vandalur participates in SAVE (Saving Asia's Vultures from Extinction) program; part of CZA vulture breeding centers.",
+    images: ["Egyptian Vulture.jpg", "Egyptian Vulture 2.jpg", "Egyptian Vulture 3.jpg"]
+  },
+  "Bird of Prey": {
+    scientific: "Accipitridae / Falconidae",
+    status: "Unknown",
+    family: "Unknown",
+    description: "A raptor observed at the zoo — likely a kite or eagle species. Exact identification uncertain from the photograph. Included as a documented sighting.",
+    images: ["Bird of Prey.jpg"]
+  },
+  "Owl": {
+    scientific: "Strigiformes",
+    status: "Varies",
+    family: "Strigidae / Tytonidae",
+    description: "The zoo's nocturnal house housed several owl species, likely including Indian Eagle-Owl, Barn Owl, and Spotted Owlet. Nocturnal predators with silent flight, asymmetric ears for precise sound localization, and forward-facing eyes. The blue-lit enclosure simulated moonlight.",
+    images: ["Owl.jpg", "Owl 2.jpg", "Owl 3.jpg", "Owl 4.jpg"]
+  },
+  "Indian Grey Mongoose": {
+    scientific: "Urva edwardsii",
+    status: "LC",
+    family: "Herpestidae",
+    description: "Small carnivore with grizzled gray fur, pointed snout, and long tail. Famous for snake-killing ability (acetylcholine receptor mutation confers resistance to cobra/krait neurotoxins). Diurnal, solitary or in pairs; forages by day, dens in burrows/rock crevices. Diet: snakes, rodents, birds, eggs, insects, fruit. The zoo's mongoose was active in a rocky enclosure, demonstrating its characteristic quick, darting movements. Agile climber; can crack eggs by throwing them backward between hind legs. Famous in Kipling's 'Rikki-Tikki-Tavi'. Conservation: widespread but declining locally due to habitat loss, roadkill, and persecution (poultry predation).",
+    images: ["Indian Grey Mongoose.jpg"]
+  },
+  "Jungle Cat": {
+    scientific: "Felis chaus",
+    status: "LC",
+    family: "Felidae",
+    description: "Medium-sized wild cat (shoulder height ~36 cm, 3-10 kg) with sandy-gray coat, faint stripes, white belly, and tufted ears. Native to wetlands, grasslands, scrub across South/Southeast Asia, Middle East, Egypt. Solitary, crepuscular/nocturnal; hunts rodents, birds, hares, fish (excellent swimmer). The zoo's jungle cat was well-camouflaged in its grassy enclosure — I spotted it only when it moved. Largest Felis species; distinct from domestic cat (longer legs, shorter tail). Conservation: widespread but declining due to wetland drainage, trapping, persecution. CITES Appendix II. Vandalur's jungle cats part of regional breeding program.",
+    images: ["Jungle Cat.jpg"]
+  },
+  "Leopard Cat": {
+    scientific: "Prionailurus bengalensis",
+    status: "LC",
+    family: "Felidae",
+    description: "Small wild cat (size of domestic cat) with beautiful leopard-like rosettes on tawny/gray background. Native to South/East Asia, Russia, Japan. Highly variable: 10+ subspecies. Arboreal, nocturnal; hunts rodents, birds, reptiles, fish. The zoo's leopard cat was in a densely planted enclosure — its spotted coat vanished in the dappled light. Ancestor of Bengal cat breed (hybrid with domestic cat). Conservation: widespread but declining due to fur trade, pet trade, habitat loss. CITES Appendix II (some subspecies Appendix I). Vandalur's leopard cats part of small felid conservation program.",
+    images: ["Leopard Cat.jpg", "Leopard Cat 2.jpg", "leopard.jpg"]
+  },
+  "Indian Chevrotain": {
+    scientific: "Moschiola indica",
+    status: "LC",
+    family: "Tragulidae",
+    description: "World's smallest ungulate (25-30 cm tall, 2-4 kg) — 'mouse deer' though not a deer. No antlers; males have elongated upper canines (tusks) for fighting. Four-chambered stomach (ruminant). Nocturnal, solitary; forest understory. Native to Western Ghats, Sri Lanka. The zoo's chevrotain was in a dimly lit, densely planted enclosure — its tiny size and cryptic coloration made it nearly invisible. Conservation: habitat loss (deforestation, plantations), hunting for bushmeat. Protected under Schedule I of India's Wildlife Protection Act. Vandalur participates in chevrotain conservation breeding.",
+    images: ["Indian Chevrotain.jpg"]
+  },
+  "Indian Crested Porcupine": {
+      scientific: "Hystrix indica",
+      status: "LC",
+      family: "Hystricidae",
+      description: "Large rodent (60-90 cm, 11-18 kg) with distinctive black-and-white quills (modified hairs, up to 30 cm). Quills rattle when shaken; erectile crest on head. Nocturnal, herbivorous: roots, tubers, bark, fruit, crops. Monogamous pairs; 1-4 young born with soft quills that harden in hours. Quills detach easily; embedded quills work deeper via muscle movement (not 'shot'). The zoo's porcupine was active at dusk, rattling quills defensively when approached. Conservation: widespread but declining locally due to habitat loss, crop raiding persecution, and quill trade. Protected under Schedule IV of India's Wildlife Protection Act.",
+      images: ["Indian Crested Porcupine.jpg", "Indian Crested Porcupine 2.jpg"]
+    },
+  "Golden Pheasant": {
+    scientific: "Chrysolophus pictus",
+    status: "LC",
+    family: "Phasianidae",
+    description: "Spectacular Chinese pheasant. Male: golden crest, bright red body, orange/black cape, green upper back, blue wings, long barred tail (up to 60 cm). Female: mottled brown. Native to western/central Chinese mountains; feral in UK. The zoo's male displayed his brilliant plumage, fanning his cape in courtship. Diet: seeds, leaves, insects. Cultural significance: 'Golden Pheasant' in Chinese art symbolizes beauty and rank. Conservation: native populations declining (habitat loss, hunting); feral populations established in UK (Brecon Beacons). Vandalur's pheasants in walk-through aviary.",
+    images: ["Golden Pheasant.jpg"]
+  },
+  "Lady Amherst Pheasant": {
+    scientific: "Chrysolophus amherstiae",
+    status: "LC",
+    family: "Phasianidae",
+    description: "Closely related to Golden Pheasant. Male: white/black cape, red crest, green/blue/white body, extremely long tail (up to 1 m). Female: mottled brown. Native to southwestern China and Myanmar; feral in UK. The zoo's pair was in a forested aviary — the male's 1-meter tail feathers trailing behind him. Diet: seeds, leaves, invertebrates. Conservation: native range declining (habitat loss); feral UK population (Bedfordshire). Vandalur's pair in walk-through aviary.",
+    images: ["Lady Amherst Pheasant.jpg"]
+  },
+  "Silver Pheasant": {
+    scientific: "Lophura nycthemera",
+    status: "LC",
+    family: "Phasianidae",
+    description: "Male: glossy blue-black with white upperparts and long white tail (up to 75 cm). Female: brown. Native to Southeast Asian forests, China; feral in UK. The zoo's male was displaying in a bamboo-planted enclosure, his white plumage gleaming. Diet: seeds, fruits, invertebrates. 15 subspecies; high variability. Conservation: widespread but some island subspecies threatened (habitat loss, hunting). Vandalur's silver pheasants in walk-through aviary.",
+    images: ["Silver Pheasant.jpg"]
+  },
+  "Brahminy Kite": {
+    scientific: "Haliastur indus",
+    status: "LC",
+    family: "Accipitridae",
+    description: "Striking raptor with chestnut body, white head/breast, black wing tips. Coastal, wetlands, rivers across South/Southeast Asia, Australia. Scavenges fish, carrion, garbage; follows fishing boats. Distinctive mewing call. The zoo's kite was in a raptor aviary, perched majestically. Cultural significance: associated with Garuda (Hindu); sacred in parts of India. Conservation: stable but threatened by wetland loss, pesticide biomagnification. Vandalur's kites part of raptor conservation program.",
+    images: ["Brahminy-Kite.jpg"]
+  },
+  "Pelican": {
+    scientific: "Pelecanus philippensis (Spot-billed) / Pelecanus onocrotalus (Great White)",
+    status: "NT / LC",
+    family: "Pelecanidae",
+    description: "Large waterbirds with enormous pouched bills (holds 13 L) for scooping fish. Spot-billed: grayish with spotted bill; Great White: white with pink facial skin. Colonial nesters on islands in lakes; ground nests. The zoo's pelicans shared a large pond, swimming in synchronized groups. Cooperative fishing: herd fish into shallows. Pouch drains water, swallows fish whole. Conservation: Spot-billed declining (wetland loss, disturbance); Great White stable. Vandalur's colony part of wetland bird program.",
+    images: ["Pelican.jpg", "Pelican 2.jpg"]
+  },
+  "Black Swan": {
+    scientific: "Cygnus atratus",
+    status: "LC",
+    family: "Anatidae",
+    description: "Elegant Australian swan: black plumage, red bill with white tip, white flight feathers visible in flight. Native to SE/SW Australia; introduced in NZ, Europe, Japan. Monogamous, long-lived (20-30 yrs). Vegetarian: aquatic plants, algae. The zoo's pair was a graceful sight on the pond. Cultural icon: emblem of Western Australia; 'black swan event' metaphor. Conservation: stable; native populations recovering after hunting ban. Vandalur's swans in ornamental pond.",
+    images: ["Black Swan.jpg", "Black Swan 2.jpg"]
+  },
+  "Indian Wild Ass": {
+    scientific: "Equus hemionus khur",
+    status: "NT",
+    family: "Equidae",
+    description: "Subspecies of onager, endemic to the Rann of Kutch, Gujarat. Sandy-grey coat, dark dorsal stripe, white belly. Fastest Indian mammal (70 km/h); can sustain 50 km/h. Lives in saline desert, feeds on grasses, shrubs, saline vegetation. The zoo's ass was in a spacious, sandy enclosure. Social: bachelor herds, family groups. Conservation: ~6,000 left (2020 census, up from ~700 in 1970s); success story of Indian conservation. Threats: habitat fragmentation (salt mining, agriculture), invasive Prosopis, disease. Protected under Schedule I; Wild Ass Sanctuary (Little Rann of Kutch). Vandalur's ass part of CZA breeding program.",
+    images: ["Indian Wild Ass.jpg"]
+  },
+  "Dhole or Jackal": {
+    scientific: "Cuon alpinus (Dhole) / Canis aureus (Golden Jackal)",
+    status: "EN (Dhole) / LC (Jackal)",
+    family: "Canidae",
+    description: "A canid observed at the zoo — identification uncertain between Dhole (Asiatic Wild Dog, reddish, pack hunter) and Golden Jackal (grayer, more solitary). Both native to the region. Dhole: endangered, pack hunter (5-12), hypercarnivore, whistling calls, cooperative hunting of deer; ~2,500 left. Golden Jackal: widespread, solitary/pairs, opportunistic omnivore. The animal was in a forested enclosure, moving with characteristic canid trot. Conservation: Dhole — ~2,500 left, EN (habitat loss, prey depletion, disease); Vandalur participates in Dhole breeding program. Golden Jackal expanding range.",
+    images: ["Dhole or Jackal.jpg"]
+  },
+  "Chimpanzee": {
+    scientific: "Pan troglodytes",
+    status: "EN",
+    family: "Hominidae",
+    description: "Our closest living relative (98.7% DNA shared; diverged ~6-7 Mya). Native to Central/West African forests and savanna-woodlands. Complex fission-fusion social structure (communities 20-150, flexible subgroups). Tool use: termite fishing, nut cracking (stone hammers), leaf sponges, spear hunting (Fongoli). Cultural transmission: 39+ documented traditions vary by community. The zoo's chimpanzee troop was in a large island enclosure with climbing structures. I watched juveniles play-wrestling while adults groomed — their human-like expressions and gestures were profoundly moving. Self-aware (mirror test), understand cause-effect, plan ahead. Conservation: ~300,000 left; declined 80% in 25 years (bushmeat, habitat loss, disease/Ebola). Vandalur participates in Pan African Sanctuary Alliance breeding program.",
+    images: ["Chimpanzee.jpg", "Chimpanzee1.jpg"]
+  },
+  "Small-clawed Otter": {
+    scientific: "Aonyx cinereus",
+    status: "VU",
+    family: "Mustelidae",
+    description: "World's smallest otter (0.9-1.2 m, 2.7-5.4 kg). Partially webbed feet and dexterous, clawless fingers (high tactile sensitivity) for manipulating prey — crabs, mollusks, crustaceans, small fish. Native to South/Southeast Asian wetlands, mangroves, rice paddies. Highly social (family groups 4-12), monogamous pairs, communal care of young. Vocal: 12+ call types (chirps, whistles, screams). Playful: sliding, juggling stones. The zoo's otters were in a stream-side enclosure — their aquatic acrobatics delighted visitors. Conservation: ~5,000 left; threatened by habitat loss (wetland drainage), pollution, pet trade (viral videos fuel demand), and human conflict (fish farms). CITES Appendix I (2019). Vandalur part of Asian small-clawed otter studbook.",
+    images: ["otter.jpg"]
+  },
+  "Butterfly": {
+    scientific: "Lepidoptera",
+    status: "Varies",
+    family: "Various",
+    description: "Numerous butterfly species fluttered through the zoo's gardens and enclosures. While not a formal exhibit, their presence indicated healthy habitat. I photographed several species including Common Mormon, Blue Tiger, and Plain Tiger butterflies.",
+    images: ["Butterfly.jpg"]
+  },
+  "Oriental Garden Lizard": {
+    scientific: "Calotes versicolor",
+    status: "LC",
+    family: "Agamidae",
+    description: "Common agamid lizard, males develop bright red head/throat during breeding season. 'Changeable Lizard' for color-shifting ability. Insectivorous, territorial. Seen basking on fence posts and walls throughout the zoo grounds.",
+    images: ["Oriental Garden Lizard.jpg"]
+  }
+};
+
+// ============================================
+// UTILITY FUNCTIONS
+// ============================================
+function getImagePath(filename) {
+  // In production, these would be copied to an assets folder
+  // For now, we reference them directly - they need to be in the same folder as the HTML
+  // or we use a relative path. Since we can't copy files, we'll use a placeholder approach.
+  // The user will need to place images alongside the HTML or adjust paths.
+  return filename;
+}
+
+function createAnimalCard(animal, data) {
+  const firstImage = data.images[0];
+  const hasSlideshow = data.images.length > 1;
+  const statusLabels = { 'CR': 'Critically Endangered', 'EN': 'Endangered', 'VU': 'Vulnerable', 'NT': 'Near Threatened', 'LC': 'Least Concern', 'Unknown': 'Status Unknown', 'Pollution': 'Environmental Note', 'N/A': 'N/A' };
+  
+  // Store images as JSON in data attribute (no complex escaping needed)
+  const imagesJson = JSON.stringify(data.images);
+
+  return `
+    <article class="animal-card reveal" role="listitem" tabindex="0" data-animal="${animal.replace(/"/g, '"')}" aria-label="View ${animal} profile">
+      <div class="animal-card-image">
+        <img src="${getImagePath(firstImage)}" alt="${animal}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="${hasSlideshow ? 'slideshow-image' : ''}" data-images="${imagesJson}">
+        <div class="skeleton" style="width:100%;height:100%;display:none;"></div>
+      </div>
+      <div class="animal-card-content">
+        <h3 class="animal-card-name">${animal}</h3>
+        <div class="animal-card-meta">
+          <span>${data.scientific}</span>
+          <span>${statusLabels[data.status] || data.status}</span>
+        </div>
+      </div>
+    </article>
+  `;
+}
+
+function initializeSlideshows() {
+  const slideshowImages = document.querySelectorAll('.slideshow-image');
+  slideshowImages.forEach(img => {
+    try {
+      const images = JSON.parse(img.dataset.images);
+      if (images.length <= 1) return;
+
+      let currentIndex = 0;
+      const interval = 2000 + Math.random() * 2000; // 2-4 seconds
+      const card = img.closest('.animal-card');
+
+      const slideshow = setInterval(() => {
+        currentIndex = (currentIndex + 1) % images.length;
+        img.style.opacity = '0';
+        setTimeout(() => {
+          img.src = images[currentIndex];
+          img.style.opacity = '1';
+        }, 300);
+      }, interval);
+
+      // Pause on hover - store interval ID in a mutable ref for proper cleanup
+      const intervalRef = { current: slideshow };
+      if (card) {
+        card.addEventListener('mouseenter', () => clearInterval(intervalRef.current));
+        card.addEventListener('mouseleave', () => {
+          const newInterval = 2000 + Math.random() * 2000;
+          intervalRef.current = setInterval(() => {
+            currentIndex = (currentIndex + 1) % images.length;
+            img.style.opacity = '0';
+            setTimeout(() => {
+              img.src = images[currentIndex];
+              img.style.opacity = '1';
+            }, 300);
+          }, newInterval);
+        });
+      }
+      img._slideshowCleanup = () => clearInterval(intervalRef.current);
+    } catch (e) {
+      console.error('Slideshow init error:', e);
+    }
+  });
+}
+
+// ============================================
+// INITIALIZATION
+// ============================================
+document.addEventListener('DOMContentLoaded', function() {
+  // Populate wildlife grid
+  const wildlifeGrid = document.getElementById('wildlifeGrid');
+  if (wildlifeGrid) {
+    let html = '';
+    for (const [animal, data] of Object.entries(animalData)) {
+      html += createAnimalCard(animal, data);
+    }
+    wildlifeGrid.innerHTML = html;
+    
+    // Add click listeners
+    wildlifeGrid.querySelectorAll('.animal-card').forEach(card => {
+      card.addEventListener('click', () => openModal(card.dataset.animal));
+      card.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(card.dataset.animal); } });
+    });
+    
+    // Initialize slideshows for animal cards
+    initializeSlideshows();
+  }
+  
+  // Initialize stat counter animation
+  initStatCounters();
+  
+  // Initialize scroll reveal
+  initScrollReveal();
+  
+  // Initialize header scroll behavior
+  initHeaderScroll();
+  
+  // Initialize mobile menu
+  initMobileMenu();
+  
+  // Initialize modal
+  initModal();
+  
+  // Initialize lightbox
+  });
+
+// ============================================
+// SCROLL REVEAL
+// ============================================
+function initScrollReveal() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+}
+
+// ============================================
+// STAT COUNTER ANIMATION
+// ============================================
+function initStatCounters() {
+  const counters = document.querySelectorAll('.stat-number[data-target]');
+  
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const counter = entry.target;
+        const target = parseInt(counter.dataset.target, 10);
+        const suffix = counter.textContent.includes('+') ? '+' : '';
+        const duration = 2000; // 2 seconds
+        const startTime = performance.now();
+        
+        function updateCounter(currentTime) {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / 2000, 1);
+          const eased = 1 - Math.pow(1 - progress, 3); // easeOutCubic
+          const current = Math.floor(target * eased);
+          
+          counter.textContent = current.toLocaleString() + suffix;
+          
+          if (progress < 1) {
+            requestAnimationFrame(updateCounter);
+          } else {
+            counter.textContent = target.toLocaleString() + suffix;
+          }
+        }
+        
+        requestAnimationFrame(updateCounter);
+        counterObserver.unobserve(counter);
+      }
+    });
+  }, { threshold: 0.5, rootMargin: '0px 0px -50px 0px' });
+  
+  counters.forEach(counter => counterObserver.observe(counter));
+}
+
+// ============================================
+// HEADER SCROLL
+// ============================================
+let lastScrollY = window.scrollY;
+function initHeaderScroll() {
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+    if (currentScrollY > 100) {
+      header.classList.add('scrolled');
+      if (currentScrollY > lastScrollY && currentScrollY > 200) {
+        header.classList.add('hidden');
+      } else {
+        header.classList.remove('hidden');
+      }
+    } else {
+      header.classList.remove('scrolled', 'hidden');
+    }
+    lastScrollY = currentScrollY;
+  }, { passive: true });
+}
+
+// ============================================
+// MOBILE MENU
+// ============================================
+function initMobileMenu() {
+  const btn = document.getElementById('mobileMenuBtn');
+  const nav = document.getElementById('mobileNav');
+  const links = nav.querySelectorAll('a');
+  
+  btn.addEventListener('click', () => {
+    const isOpen = btn.classList.toggle('active');
+    nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+  
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      btn.classList.remove('active');
+      nav.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    });
+  });
+  
+  // Close on escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && nav.classList.contains('open')) {
+      btn.classList.remove('active');
+      nav.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+  });
+}
+
+// ============================================
+// ANIMAL MODAL
+// ============================================
+let currentAnimalImages = [];
+let currentImageIndex = 0;
+
+function initModal() {
+  const modal = document.getElementById('animalModal');
+  const closeBtn = document.getElementById('modalClose');
+  
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+  
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !modal.hidden) closeModal();
+    if (!modal.hidden && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) {
+      navigateModalGallery(e.key === 'ArrowRight' ? 1 : -1);
+    }
+  });
+}
+
+function openModal(animalName) {
+  const data = animalData[animalName];
+  if (!data) return;
+  
+  currentAnimalImages = data.images;
+  currentImageIndex = 0;
+  
+  const modal = document.getElementById('animalModal');
+  const title = document.getElementById('modalTitle');
+  const meta = document.getElementById('modalMeta');
+  const desc = document.getElementById('modalDescription');
+  const gallery = document.getElementById('modalGallery');
+  const mainImg = document.getElementById('modalMainImage');
+  
+  title.textContent = animalName;
+  meta.innerHTML = `
+    <span>${data.scientific}</span>
+    <span>${data.family}</span>
+    <span>${getStatusLabel(data.status)}</span>
+  `;
+  desc.textContent = data.description;
+  mainImg.src = getImagePath(currentAnimalImages[0]);
+  mainImg.alt = animalName;
+  
+  // Build gallery thumbnails
+  gallery.innerHTML = '';
+  currentAnimalImages.forEach((img, i) => {
+    const thumb = document.createElement('img');
+    thumb.src = getImagePath(img);
+    thumb.alt = `${animalName} - Photo ${i + 1}`;
+    thumb.dataset.index = i;
+    thumb.role = 'listitem';
+    thumb.tabIndex = 0;
+    if (i === 0) thumb.classList.add('active');
+    thumb.addEventListener('click', () => setModalImage(i));
+    thumb.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setModalImage(i); } });
+    gallery.appendChild(thumb);
+  });
+  
+  modal.hidden = false;
+  document.body.style.overflow = 'hidden';
+  // Force reflow for animation
+  requestAnimationFrame(() => modal.classList.add('open'));
+  
+  // Focus management
+  closeBtn.focus();
+}
+
+function closeModal() {
+  const modal = document.getElementById('animalModal');
+  modal.classList.remove('open');
+  setTimeout(() => {
+    modal.hidden = true;
+    document.body.style.overflow = '';
+  }, 300);
+}
+
+function setModalImage(index) {
+  const mainImg = document.getElementById('modalMainImage');
+  const thumbs = document.querySelectorAll('.modal-gallery img');
+  if (index >= 0 && index < currentAnimalImages.length) {
+    currentImageIndex = index;
+    mainImg.src = getImagePath(currentAnimalImages[index]);
+    thumbs.forEach((t, i) => t.classList.toggle('active', i === index));
+  }
+}
+
+function navigateModalGallery(direction) {
+  const newIndex = (currentImageIndex + direction + currentAnimalImages.length) % currentAnimalImages.length;
+  setModalImage(newIndex);
+}
+
+function getStatusLabel(status) {
+  const labels = { 'CR': 'Critically Endangered', 'EN': 'Endangered', 'VU': 'Vulnerable', 'NT': 'Near Threatened', 'LC': 'Least Concern', 'Unknown': 'Status Unknown', 'Pollution': 'Environmental Note', 'N/A': 'N/A' };
+  return labels[status] || status;
+}
+
+// ============================================
+// SMOOTH SCROLL FOR ANCHOR LINKS
+// ============================================
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const targetId = this.getAttribute('href');
+    if (targetId === '#') return;
+    const target = document.querySelector(targetId);
+    if (target) {
+      e.preventDefault();
+      const headerHeight = document.getElementById('header').offsetHeight;
+      const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+      window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+    }
+  });
+});
+
+// ============================================
+// LAZY LOADING FALLBACK
+// ============================================
+if ('loading' in HTMLImageElement.prototype) {
+  // Native lazy loading supported
+} else {
+  // Fallback for older browsers
+  const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        img.src = img.dataset.src || img.src;
+        observer.unobserve(img);
+      }
+    });
+  });
+  lazyImages.forEach(img => observer.observe(img));
+}
+
+
+console.log('Arignar Anna Zoological Park Blog initialized successfully.');
+</script>
+</body>
+</html>

@@ -1,0 +1,1592 @@
+{
+  "ostrich": [
+    {
+      "filename": "ostrich.jpg",
+      "width": 1200,
+      "height": 1600,
+      "size_mb": 0.36
+    },
+    {
+      "filename": "ostrich1.jpg",
+      "width": 1599,
+      "height": 899,
+      "size_mb": 0.22
+    }
+  ],
+  "Indian Peafowl": [
+    {
+      "filename": "Indian Peafowl 6.jpg",
+      "width": 960,
+      "height": 1280,
+      "size_mb": 0.23
+    },
+    {
+      "filename": "Indian Peafowl 8.jpg",
+      "width": 1200,
+      "height": 1600,
+      "size_mb": 0.23
+    },
+    {
+      "filename": "Indian Peafowl 11.jpg",
+      "width": 3072,
+      "height": 4096,
+      "size_mb": 1.06
+    },
+    {
+      "filename": "Indian Peafowl 5.jpg",
+      "width": 1600,
+      "height": 1200,
+      "size_mb": 0.49
+    },
+    {
+      "filename": "Indian Peafowl 9.jpg",
+      "width": 1600,
+      "height": 1200,
+      "size_mb": 0.19
+    },
+    {
+      "filename": "Indian Peafowl 4.jpg",
+      "width": 1280,
+      "height": 963,
+      "size_mb": 0.26
+    },
+    {
+      "filename": "Indian Peafowl 7.jpg",
+      "width": 1600,
+      "height": 900,
+      "size_mb": 0.11
+    },
+    {
+      "filename": "Indian Peafowl.jpg",
+      "width": 2304,
+      "height": 4096,
+      "size_mb": 2.16
+    },
+    {
+      "filename": "Indian Peafowl 10.jpg",
+      "width": 1200,
+      "height": 1600,
+      "size_mb": 0.22
+    },
+    {
+      "filename": "Indian Peafowl 2.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 2.97
+    },
+    {
+      "filename": "Indian Peafowl 3.jpg",
+      "width": 1600,
+      "height": 1200,
+      "size_mb": 0.35
+    }
+  ],
+  "Lion-tailed Macaque": [
+    {
+      "filename": "Lion-tailed Macaque.jpg",
+      "width": 1600,
+      "height": 1200,
+      "size_mb": 0.52
+    },
+    {
+      "filename": "Lion-tailed Macaque 3.jpg",
+      "width": 1600,
+      "height": 900,
+      "size_mb": 0.32
+    },
+    {
+      "filename": "Lion-tailed Macaque 2.jpg",
+      "width": 1200,
+      "height": 1600,
+      "size_mb": 0.5
+    }
+  ],
+  "IMG-20260925-WA": [
+    {
+      "filename": "IMG-20260925-WA0067.jpg",
+      "width": 1600,
+      "height": 715,
+      "size_mb": 0.08
+    },
+    {
+      "filename": "IMG-20260925-WA0070.jpg",
+      "width": 1600,
+      "height": 900,
+      "size_mb": 0.33
+    },
+    {
+      "filename": "IMG-20260925-WA0046.jpg",
+      "width": 1200,
+      "height": 1600,
+      "size_mb": 0.45
+    },
+    {
+      "filename": "IMG-20260925-WA0108.jpg",
+      "width": 960,
+      "height": 1280,
+      "size_mb": 0.17
+    },
+    {
+      "filename": "IMG-20260925-WA0068.jpg",
+      "width": 715,
+      "height": 1600,
+      "size_mb": 0.14
+    },
+    {
+      "filename": "IMG-20260925-WA0109.jpg",
+      "width": 720,
+      "height": 1280,
+      "size_mb": 0.23
+    },
+    {
+      "filename": "IMG-20260925-WA0105.jpg",
+      "width": 960,
+      "height": 1280,
+      "size_mb": 0.15
+    },
+    {
+      "filename": "IMG-20260925-WA0047.jpg",
+      "width": 852,
+      "height": 1372,
+      "size_mb": 0.14
+    },
+    {
+      "filename": "IMG-20260925-WA0039.jpg",
+      "width": 1600,
+      "height": 1200,
+      "size_mb": 0.44
+    },
+    {
+      "filename": "IMG-20260925-WA0063.jpg",
+      "width": 1600,
+      "height": 715,
+      "size_mb": 0.19
+    },
+    {
+      "filename": "IMG-20260925-WA0106.jpg",
+      "width": 960,
+      "height": 1280,
+      "size_mb": 0.15
+    },
+    {
+      "filename": "IMG-20260925-WA0065.jpg",
+      "width": 1600,
+      "height": 715,
+      "size_mb": 0.17
+    },
+    {
+      "filename": "IMG-20260925-WA0044.jpg",
+      "width": 1200,
+      "height": 1600,
+      "size_mb": 0.53
+    },
+    {
+      "filename": "IMG-20260925-WA0060.jpg",
+      "width": 715,
+      "height": 1600,
+      "size_mb": 0.11
+    },
+    {
+      "filename": "IMG-20260925-WA0066.jpg",
+      "width": 1600,
+      "height": 715,
+      "size_mb": 0.09
+    },
+    {
+      "filename": "IMG-20260925-WA0038.jpg",
+      "width": 1200,
+      "height": 1600,
+      "size_mb": 0.47
+    },
+    {
+      "filename": "IMG-20260925-WA0062.jpg",
+      "width": 1600,
+      "height": 715,
+      "size_mb": 0.1
+    },
+    {
+      "filename": "IMG-20260925-WA0064.jpg",
+      "width": 1600,
+      "height": 715,
+      "size_mb": 0.09
+    },
+    {
+      "filename": "IMG-20260925-WA0024.jpg",
+      "width": 1280,
+      "height": 920,
+      "size_mb": 0.28
+    },
+    {
+      "filename": "IMG-20260925-WA0055.jpg",
+      "width": 1280,
+      "height": 960,
+      "size_mb": 0.36
+    },
+    {
+      "filename": "IMG-20260925-WA0107.jpg",
+      "width": 960,
+      "height": 1280,
+      "size_mb": 0.15
+    },
+    {
+      "filename": "IMG-20260925-WA0052.jpg",
+      "width": 960,
+      "height": 1280,
+      "size_mb": 0.12
+    },
+    {
+      "filename": "IMG-20260925-WA0016.jpg",
+      "width": 1600,
+      "height": 1200,
+      "size_mb": 0.16
+    },
+    {
+      "filename": "IMG-20260925-WA0014.jpg",
+      "width": 1083,
+      "height": 1600,
+      "size_mb": 0.31
+    },
+    {
+      "filename": "IMG-20260925-WA0069.jpg",
+      "width": 1600,
+      "height": 900,
+      "size_mb": 0.31
+    },
+    {
+      "filename": "IMG-20260925-WA0040.jpg",
+      "width": 1200,
+      "height": 1600,
+      "size_mb": 0.29
+    },
+    {
+      "filename": "IMG-20260925-WA0037.jpg",
+      "width": 1600,
+      "height": 1200,
+      "size_mb": 0.33
+    }
+  ],
+  "nile-crocodile": [
+    {
+      "filename": "nile-crocodile.jpg",
+      "width": 1600,
+      "height": 1200,
+      "size_mb": 0.33
+    }
+  ],
+  "Sloth Bear": [
+    {
+      "filename": "Sloth Bear 4.jpg",
+      "width": 1083,
+      "height": 1600,
+      "size_mb": 0.24
+    },
+    {
+      "filename": "Sloth Bear 5.jpg",
+      "width": 4096,
+      "height": 3072,
+      "size_mb": 1.19
+    },
+    {
+      "filename": "Sloth Bear 3.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 7.44
+    },
+    {
+      "filename": "Sloth Bear 2.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 5.27
+    },
+    {
+      "filename": "Sloth Bear.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 5.28
+    }
+  ],
+  "Python": [
+    {
+      "filename": "Python 8.jpg",
+      "width": 1600,
+      "height": 1200,
+      "size_mb": 0.13
+    },
+    {
+      "filename": "Python 2.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 2.02
+    },
+    {
+      "filename": "Python 6.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 1.58
+    },
+    {
+      "filename": "Python 4.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 1.18
+    },
+    {
+      "filename": "Python 3.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 1.31
+    },
+    {
+      "filename": "Python.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 2.23
+    },
+    {
+      "filename": "Python 5.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 2.92
+    },
+    {
+      "filename": "Python 7.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 2.58
+    }
+  ],
+  "Indian Gaur": [
+    {
+      "filename": "Indian Gaur 3.jpg",
+      "width": 1600,
+      "height": 1200,
+      "size_mb": 0.23
+    },
+    {
+      "filename": "Indian Gaur.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 2.84
+    },
+    {
+      "filename": "Indian Gaur 4.jpg",
+      "width": 1280,
+      "height": 963,
+      "size_mb": 0.17
+    },
+    {
+      "filename": "Indian Gaur 6.jpg",
+      "width": 4096,
+      "height": 3072,
+      "size_mb": 0.81
+    },
+    {
+      "filename": "Indian Gaur 2.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 2.63
+    },
+    {
+      "filename": "Indian Gaur 5.jpg",
+      "width": 1280,
+      "height": 960,
+      "size_mb": 0.32
+    }
+  ],
+  "Bengal Tiger": [
+    {
+      "filename": "Bengal Tiger 3.jpg",
+      "width": 1200,
+      "height": 1600,
+      "size_mb": 0.21
+    },
+    {
+      "filename": "Bengal Tiger 2.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 1.57
+    },
+    {
+      "filename": "Bengal Tiger.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 2.56
+    }
+  ],
+  "Sambar and Spotted Deer": [
+    {
+      "filename": "Sambar and Spotted Deer.jpg",
+      "width": 1600,
+      "height": 1200,
+      "size_mb": 0.39
+    },
+    {
+      "filename": "Sambar and Spotted Deer 4.jpg",
+      "width": 1600,
+      "height": 1200,
+      "size_mb": 0.68
+    },
+    {
+      "filename": "Sambar and Spotted Deer 3.jpg",
+      "width": 1280,
+      "height": 960,
+      "size_mb": 0.41
+    },
+    {
+      "filename": "Sambar and Spotted Deer 2.jpg",
+      "width": 1600,
+      "height": 1200,
+      "size_mb": 0.3
+    }
+  ],
+  "Emu with White Bird": [
+    {
+      "filename": "Emu with White Bird 2.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 5.68
+    },
+    {
+      "filename": "Emu with White Bird.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 5.32
+    }
+  ],
+  "Silver Pheasant": [
+    {
+      "filename": "Silver Pheasant.jpg",
+      "width": 2304,
+      "height": 4096,
+      "size_mb": 3.15
+    }
+  ],
+  "Sun Conure": [
+    {
+      "filename": "Sun Conure.jpg",
+      "width": 4096,
+      "height": 3072,
+      "size_mb": 0.54
+    },
+    {
+      "filename": "Sun Conure 3.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 4.52
+    },
+    {
+      "filename": "Sun Conure 2.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 3.2
+    }
+  ],
+  "Bird of Prey": [
+    {
+      "filename": "Bird of Prey.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 3.11
+    }
+  ],
+  "Blue-and-yellow Macaw": [
+    {
+      "filename": "Blue-and-yellow Macaw 5.jpg",
+      "width": 1280,
+      "height": 960,
+      "size_mb": 0.09
+    },
+    {
+      "filename": "Blue-and-yellow Macaw 7.jpg",
+      "width": 4096,
+      "height": 3072,
+      "size_mb": 0.51
+    },
+    {
+      "filename": "Blue-and-yellow Macaw 4.jpg",
+      "width": 1280,
+      "height": 960,
+      "size_mb": 0.07
+    },
+    {
+      "filename": "Blue-and-yellow Macaw 3.jpg",
+      "width": 963,
+      "height": 1280,
+      "size_mb": 0.3
+    },
+    {
+      "filename": "Blue-and-yellow Macaw 6.jpg",
+      "width": 4096,
+      "height": 3072,
+      "size_mb": 0.37
+    },
+    {
+      "filename": "Blue-and-yellow Macaw 2.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 2.95
+    },
+    {
+      "filename": "Blue-and-yellow Macaw.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 1.38
+    }
+  ],
+  "Lion": [
+    {
+      "filename": "Lion 2.jpg",
+      "width": 1600,
+      "height": 1200,
+      "size_mb": 0.25
+    },
+    {
+      "filename": "Lion 3.jpg",
+      "width": 1600,
+      "height": 900,
+      "size_mb": 0.34
+    },
+    {
+      "filename": "Lion.jpg",
+      "width": 1600,
+      "height": 1200,
+      "size_mb": 0.37
+    }
+  ],
+  "Himalayan Black Bear": [
+    {
+      "filename": "Himalayan Black Bear 5.jpg",
+      "width": 960,
+      "height": 1280,
+      "size_mb": 0.3
+    },
+    {
+      "filename": "Himalayan Black Bear 3.jpg",
+      "width": 960,
+      "height": 1280,
+      "size_mb": 0.29
+    },
+    {
+      "filename": "Himalayan Black Bear.jpg",
+      "width": 960,
+      "height": 1280,
+      "size_mb": 0.31
+    },
+    {
+      "filename": "Himalayan Black Bear 4.jpg",
+      "width": 960,
+      "height": 1280,
+      "size_mb": 0.3
+    },
+    {
+      "filename": "Himalayan Black Bear 2.jpg",
+      "width": 960,
+      "height": 1280,
+      "size_mb": 0.28
+    }
+  ],
+  "Owl": [
+    {
+      "filename": "Owl 3.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 1.38
+    },
+    {
+      "filename": "Owl 2.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 1.08
+    },
+    {
+      "filename": "Owl.jpg",
+      "width": 2304,
+      "height": 4096,
+      "size_mb": 0.75
+    },
+    {
+      "filename": "Owl 4.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 1.01
+    }
+  ],
+  "IMG": [
+    {
+      "filename": "IMG20260924141327.jpg",
+      "width": 2304,
+      "height": 4096,
+      "size_mb": 0.71
+    },
+    {
+      "filename": "IMG20260924150840.jpg",
+      "width": 3072,
+      "height": 4096,
+      "size_mb": 6.2
+    },
+    {
+      "filename": "IMG20260924141316.jpg",
+      "width": 2304,
+      "height": 4096,
+      "size_mb": 0.72
+    },
+    {
+      "filename": "IMG20260924141339.jpg",
+      "width": 2304,
+      "height": 4096,
+      "size_mb": 0.87
+    }
+  ],
+  "Cassowary": [
+    {
+      "filename": "Cassowary.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 3.02
+    },
+    {
+      "filename": "Cassowary 2.jpg",
+      "width": 960,
+      "height": 1280,
+      "size_mb": 0.45
+    },
+    {
+      "filename": "Cassowary 3.jpg",
+      "width": 1600,
+      "height": 1200,
+      "size_mb": 0.58
+    }
+  ],
+  "Emu": [
+    {
+      "filename": "Emu 8.jpg",
+      "width": 1600,
+      "height": 900,
+      "size_mb": 0.34
+    },
+    {
+      "filename": "Emu 5.jpg",
+      "width": 1600,
+      "height": 1200,
+      "size_mb": 0.27
+    },
+    {
+      "filename": "Emu 6.jpg",
+      "width": 4080,
+      "height": 3060,
+      "size_mb": 1.85
+    },
+    {
+      "filename": "Emu 7.jpg",
+      "width": 1280,
+      "height": 963,
+      "size_mb": 0.34
+    },
+    {
+      "filename": "Emu 4.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 2.88
+    },
+    {
+      "filename": "Emu 3.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 2.79
+    },
+    {
+      "filename": "Emu 2.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 6.54
+    },
+    {
+      "filename": "Emu.jpg",
+      "width": 1599,
+      "height": 899,
+      "size_mb": 0.26
+    }
+  ],
+  "Hippopotamus": [
+    {
+      "filename": "Hippopotamus 2.jpg",
+      "width": 2304,
+      "height": 4096,
+      "size_mb": 1.67
+    },
+    {
+      "filename": "Hippopotamus 3.jpg",
+      "width": 720,
+      "height": 1600,
+      "size_mb": 0.21
+    },
+    {
+      "filename": "Hippopotamus.jpg",
+      "width": 2304,
+      "height": 4096,
+      "size_mb": 1.2
+    }
+  ],
+  "Ostrich": [
+    {
+      "filename": "Ostrich 2.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 2.11
+    },
+    {
+      "filename": "Ostrich 3.jpg",
+      "width": 2304,
+      "height": 4096,
+      "size_mb": 1.67
+    },
+    {
+      "filename": "Ostrich.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 2.5
+    }
+  ],
+  "Indian Grey Mongoose": [
+    {
+      "filename": "Indian Grey Mongoose.jpg",
+      "width": 3072,
+      "height": 4096,
+      "size_mb": 1.04
+    }
+  ],
+  "Crocodile": [
+    {
+      "filename": "Crocodile 4.jpg",
+      "width": 963,
+      "height": 1280,
+      "size_mb": 0.29
+    },
+    {
+      "filename": "Crocodile.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 4.95
+    },
+    {
+      "filename": "Crocodile 2.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 3.54
+    },
+    {
+      "filename": "Crocodile 3.jpg",
+      "width": 1200,
+      "height": 1600,
+      "size_mb": 0.46
+    }
+  ],
+  "IMG-20260924-WA": [
+    {
+      "filename": "IMG-20260924-WA0097.jpg",
+      "width": 1600,
+      "height": 1200,
+      "size_mb": 0.36
+    },
+    {
+      "filename": "IMG-20260924-WA0096.jpg",
+      "width": 1600,
+      "height": 1200,
+      "size_mb": 0.35
+    },
+    {
+      "filename": "IMG-20260924-WA0095.jpg",
+      "width": 1600,
+      "height": 1200,
+      "size_mb": 0.39
+    },
+    {
+      "filename": "IMG-20260924-WA0050.jpg",
+      "width": 899,
+      "height": 1599,
+      "size_mb": 0.11
+    },
+    {
+      "filename": "IMG-20260924-WA0099.jpg",
+      "width": 1600,
+      "height": 1200,
+      "size_mb": 0.33
+    },
+    {
+      "filename": "IMG-20260924-WA0098.jpg",
+      "width": 1600,
+      "height": 1200,
+      "size_mb": 0.34
+    },
+    {
+      "filename": "IMG-20260924-WA0049.jpg",
+      "width": 1600,
+      "height": 900,
+      "size_mb": 0.37
+    }
+  ],
+  "White Peafowl": [
+    {
+      "filename": "White Peafowl1.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 1.77
+    },
+    {
+      "filename": "White Peafowl 2.jpg",
+      "width": 1600,
+      "height": 900,
+      "size_mb": 0.22
+    },
+    {
+      "filename": "White Peafowl.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 1.28
+    }
+  ],
+  "Green Iguana": [
+    {
+      "filename": "Green Iguana.jpg",
+      "width": 960,
+      "height": 1280,
+      "size_mb": 0.15
+    },
+    {
+      "filename": "Green Iguana 2.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 1.87
+    },
+    {
+      "filename": "Green Iguana 3.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 2.58
+    }
+  ],
+  "Black Swan": [
+    {
+      "filename": "Black Swan 2.jpg",
+      "width": 4096,
+      "height": 3072,
+      "size_mb": 0.5
+    },
+    {
+      "filename": "Black Swan.jpg",
+      "width": 1600,
+      "height": 1200,
+      "size_mb": 0.31
+    }
+  ],
+  "Jungle Cat": [
+    {
+      "filename": "Jungle Cat.jpg",
+      "width": 2304,
+      "height": 4096,
+      "size_mb": 1.29
+    }
+  ],
+  "Indian Chevrotain": [
+    {
+      "filename": "Indian Chevrotain.jpg",
+      "width": 1600,
+      "height": 900,
+      "size_mb": 0.21
+    }
+  ],
+  "Adjutant Stork": [
+    {
+      "filename": "Adjutant Stork 4.jpg",
+      "width": 1200,
+      "height": 1600,
+      "size_mb": 0.29
+    },
+    {
+      "filename": "Adjutant Stork 5.jpg",
+      "width": 1200,
+      "height": 1600,
+      "size_mb": 0.29
+    },
+    {
+      "filename": "Adjutant Stork 2.jpg",
+      "width": 960,
+      "height": 1280,
+      "size_mb": 0.33
+    },
+    {
+      "filename": "Adjutant Stork 8.jpg",
+      "width": 1600,
+      "height": 1200,
+      "size_mb": 0.64
+    },
+    {
+      "filename": "Adjutant Stork 3.jpg",
+      "width": 900,
+      "height": 1600,
+      "size_mb": 0.38
+    },
+    {
+      "filename": "Adjutant Stork.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 1.62
+    },
+    {
+      "filename": "Adjutant Stork 6.jpg",
+      "width": 1200,
+      "height": 1600,
+      "size_mb": 0.27
+    },
+    {
+      "filename": "Adjutant Stork 9.jpg",
+      "width": 1200,
+      "height": 1600,
+      "size_mb": 0.27
+    },
+    {
+      "filename": "Adjutant Stork 7.jpg",
+      "width": 1600,
+      "height": 1200,
+      "size_mb": 0.5
+    }
+  ],
+  "Indian Rhinoceros": [
+    {
+      "filename": "Indian Rhinoceros 2.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 1.46
+    },
+    {
+      "filename": "Indian Rhinoceros.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 2.07
+    },
+    {
+      "filename": "Indian Rhinoceros 4.jpg",
+      "width": 1280,
+      "height": 963,
+      "size_mb": 0.29
+    },
+    {
+      "filename": "Indian Rhinoceros 3.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 2.29
+    }
+  ],
+  "Egyptian Vulture": [
+    {
+      "filename": "Egyptian Vulture 3.jpg",
+      "width": 3072,
+      "height": 4096,
+      "size_mb": 0.5
+    },
+    {
+      "filename": "Egyptian Vulture.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 2.53
+    },
+    {
+      "filename": "Egyptian Vulture 2.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 3.03
+    }
+  ],
+  "Indian Crested Porcupine": [
+    {
+      "filename": "Indian Crested Porcupine.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 2.22
+    },
+    {
+      "filename": "Indian Crested Porcupine 2.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 1.45
+    }
+  ],
+  "No Animal - Plastic Bottles": [
+    {
+      "filename": "No Animal - Plastic Bottles.jpg",
+      "width": 960,
+      "height": 1280,
+      "size_mb": 0.32
+    }
+  ],
+  "Macaque": [
+    {
+      "filename": "Macaque.jpg",
+      "width": 1600,
+      "height": 1200,
+      "size_mb": 0.27
+    }
+  ],
+  "Spotted Deer with Peafowl": [
+    {
+      "filename": "Spotted Deer with Peafowl.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 2.95
+    }
+  ],
+  "leopard": [
+    {
+      "filename": "leopard.jpg",
+      "width": 1599,
+      "height": 899,
+      "size_mb": 0.12
+    }
+  ],
+  "Tiger": [
+    {
+      "filename": "Tiger.jpg",
+      "width": 4096,
+      "height": 3072,
+      "size_mb": 0.76
+    }
+  ],
+  "Spotted Deer": [
+    {
+      "filename": "Spotted Deer 6.jpg",
+      "width": 1280,
+      "height": 963,
+      "size_mb": 0.26
+    },
+    {
+      "filename": "Spotted Deer 3.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 3.03
+    },
+    {
+      "filename": "Spotted Deer 7.jpg",
+      "width": 960,
+      "height": 1280,
+      "size_mb": 0.28
+    },
+    {
+      "filename": "Spotted Deer 5.jpg",
+      "width": 1280,
+      "height": 963,
+      "size_mb": 0.31
+    },
+    {
+      "filename": "Spotted Deer 9.jpg",
+      "width": 1600,
+      "height": 1200,
+      "size_mb": 0.37
+    },
+    {
+      "filename": "Spotted Deer.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 3.29
+    },
+    {
+      "filename": "Spotted Deer 8.jpg",
+      "width": 960,
+      "height": 1280,
+      "size_mb": 0.27
+    },
+    {
+      "filename": "Spotted Deer 4.jpg",
+      "width": 1200,
+      "height": 1600,
+      "size_mb": 0.29
+    },
+    {
+      "filename": "Spotted Deer 2.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 1.06
+    }
+  ],
+  "Bear": [
+    {
+      "filename": "Bear 2.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 2.78
+    },
+    {
+      "filename": "Bear.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 1.06
+    },
+    {
+      "filename": "Bear 4.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 3.43
+    },
+    {
+      "filename": "Bear 3.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 2.26
+    }
+  ],
+  "Stork or Pelican": [
+    {
+      "filename": "Stork or Pelican.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 2.23
+    }
+  ],
+  "Pelican": [
+    {
+      "filename": "Pelican.jpg",
+      "width": 963,
+      "height": 1280,
+      "size_mb": 0.24
+    },
+    {
+      "filename": "Pelican 2.jpg",
+      "width": 1280,
+      "height": 963,
+      "size_mb": 0.25
+    }
+  ],
+  "snake": [
+    {
+      "filename": "snake2.jpg",
+      "width": 1600,
+      "height": 715,
+      "size_mb": 0.09
+    }
+  ],
+  "Chimpanzee": [
+    {
+      "filename": "Chimpanzee1.jpg",
+      "width": 2304,
+      "height": 4096,
+      "size_mb": 2.7
+    },
+    {
+      "filename": "Chimpanzee.jpg",
+      "width": 2304,
+      "height": 4096,
+      "size_mb": 6.38
+    }
+  ],
+  "Lion-tailed Macaques": [
+    {
+      "filename": "Lion-tailed Macaques.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 2.77
+    }
+  ],
+  "Parakeets": [
+    {
+      "filename": "Parakeets.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 2.86
+    }
+  ],
+  "Macaques": [
+    {
+      "filename": "Macaques2.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 3.8
+    },
+    {
+      "filename": "Macaques.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 2.19
+    },
+    {
+      "filename": "Macaques1.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 3.34
+    }
+  ],
+  "Yellow Anaconda": [
+    {
+      "filename": "Yellow Anaconda.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 2.27
+    },
+    {
+      "filename": "Yellow Anaconda 2.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 2.86
+    }
+  ],
+  "Adjutant": [
+    {
+      "filename": "Adjutant-Stroke1.jpg",
+      "width": 1599,
+      "height": 899,
+      "size_mb": 0.23
+    },
+    {
+      "filename": "Adjutant-Stroke.jpg",
+      "width": 1200,
+      "height": 1600,
+      "size_mb": 0.27
+    }
+  ],
+  "Sarus Crane": [
+    {
+      "filename": "Sarus Crane.jpg",
+      "width": 1200,
+      "height": 1600,
+      "size_mb": 0.17
+    },
+    {
+      "filename": "Sarus Crane 6.jpg",
+      "width": 1200,
+      "height": 1600,
+      "size_mb": 0.17
+    },
+    {
+      "filename": "Sarus Crane 2.jpg",
+      "width": 1200,
+      "height": 1600,
+      "size_mb": 0.15
+    },
+    {
+      "filename": "Sarus Crane 3.jpg",
+      "width": 1200,
+      "height": 1600,
+      "size_mb": 0.15
+    },
+    {
+      "filename": "Sarus Crane 5.jpg",
+      "width": 1200,
+      "height": 1600,
+      "size_mb": 0.17
+    },
+    {
+      "filename": "Sarus Crane 4.jpg",
+      "width": 1200,
+      "height": 1600,
+      "size_mb": 0.15
+    }
+  ],
+  "White Tiger": [
+    {
+      "filename": "White Tiger.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 3.53
+    },
+    {
+      "filename": "White Tiger 2.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 4.76
+    },
+    {
+      "filename": "White Tiger 3.jpg",
+      "width": 1599,
+      "height": 899,
+      "size_mb": 0.21
+    }
+  ],
+  "Lady Amherst Pheasant": [
+    {
+      "filename": "Lady Amherst Pheasant.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 2.18
+    }
+  ],
+  "Nile-Hippopotamus": [
+    {
+      "filename": "Nile-Hippopotamus1.jpg",
+      "width": 963,
+      "height": 1280,
+      "size_mb": 0.23
+    },
+    {
+      "filename": "Nile-Hippopotamus.jpg",
+      "width": 720,
+      "height": 1600,
+      "size_mb": 0.21
+    }
+  ],
+  "Brahminy-Kite": [
+    {
+      "filename": "Brahminy-Kite.jpg",
+      "width": 3072,
+      "height": 4096,
+      "size_mb": 1.09
+    }
+  ],
+  "tiger": [
+    {
+      "filename": "tiger.jpg",
+      "width": 899,
+      "height": 1599,
+      "size_mb": 0.18
+    }
+  ],
+  "Asian Elephant": [
+    {
+      "filename": "Asian Elephant 2.jpg",
+      "width": 2304,
+      "height": 4096,
+      "size_mb": 1.58
+    },
+    {
+      "filename": "Asian Elephant 3.jpg",
+      "width": 2304,
+      "height": 4096,
+      "size_mb": 5.77
+    },
+    {
+      "filename": "Asian Elephant.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 2.09
+    }
+  ],
+  "Giraffe": [
+    {
+      "filename": "Giraffe 3.jpg",
+      "width": 2304,
+      "height": 4096,
+      "size_mb": 1.85
+    },
+    {
+      "filename": "Giraffe 2.jpg",
+      "width": 2304,
+      "height": 4096,
+      "size_mb": 1.15
+    },
+    {
+      "filename": "Giraffe.jpg",
+      "width": 2304,
+      "height": 4096,
+      "size_mb": 2.48
+    },
+    {
+      "filename": "Giraffe 4.jpg",
+      "width": 2304,
+      "height": 4096,
+      "size_mb": 2.5
+    }
+  ],
+  "Dhole or Jackal": [
+    {
+      "filename": "Dhole or Jackal.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 2.09
+    }
+  ],
+  "Monitor Lizard": [
+    {
+      "filename": "Monitor Lizard.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 2.9
+    }
+  ],
+  "No animal is clearly identifiable": [
+    {
+      "filename": "No animal is clearly identifiable.jpg",
+      "width": 2304,
+      "height": 4096,
+      "size_mb": 1.73
+    }
+  ],
+  "macaw": [
+    {
+      "filename": "macaw.jpg",
+      "width": 1599,
+      "height": 899,
+      "size_mb": 0.3
+    }
+  ],
+  "Leopard Cat": [
+    {
+      "filename": "Leopard Cat 2.jpg",
+      "width": 1599,
+      "height": 899,
+      "size_mb": 0.1
+    },
+    {
+      "filename": "Leopard Cat.jpg",
+      "width": 2304,
+      "height": 4096,
+      "size_mb": 3.58
+    }
+  ],
+  "Golden Pheasant": [
+    {
+      "filename": "Golden Pheasant.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 2.44
+    }
+  ],
+  "Lion-lioness": [
+    {
+      "filename": "Lion-lioness.jpg",
+      "width": 1600,
+      "height": 1200,
+      "size_mb": 0.38
+    }
+  ],
+  "Alexandrine Parakeet": [
+    {
+      "filename": "Alexandrine Parakeet.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 1.16
+    }
+  ],
+  "otter": [
+    {
+      "filename": "otter.jpg",
+      "width": 4096,
+      "height": 3072,
+      "size_mb": 0.87
+    }
+  ],
+  "Indian Wild Ass": [
+    {
+      "filename": "Indian Wild Ass.jpg",
+      "width": 4096,
+      "height": 3072,
+      "size_mb": 0.63
+    }
+  ],
+  "Painted Stork": [
+    {
+      "filename": "Painted Stork 3.jpg",
+      "width": 1599,
+      "height": 899,
+      "size_mb": 0.12
+    },
+    {
+      "filename": "Painted Stork.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 2.62
+    },
+    {
+      "filename": "Painted Stork 2.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 3.36
+    }
+  ],
+  "Cockatiel": [
+    {
+      "filename": "Cockatiel.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 1.66
+    }
+  ],
+  "Parrot": [
+    {
+      "filename": "Parrot.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 1.96
+    }
+  ],
+  "Butterfly": [
+    {
+      "filename": "Butterfly.jpg",
+      "width": 1600,
+      "height": 1200,
+      "size_mb": 0.27
+    }
+  ],
+  "Cockatoo": [
+    {
+      "filename": "Cockatoo 2.jpg",
+      "width": 1599,
+      "height": 899,
+      "size_mb": 0.04
+    },
+    {
+      "filename": "Cockatoo.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 0.93
+    }
+  ],
+  "Parakeet": [
+    {
+      "filename": "Parakeet.jpg",
+      "width": 4096,
+      "height": 2304,
+      "size_mb": 5.38
+    }
+  ],
+  "Oriental Garden Lizard": [
+    {
+      "filename": "Oriental Garden Lizard.jpg",
+      "width": 3060,
+      "height": 4080,
+      "size_mb": 0.89
+    }
+  ],
+  "peafowl": [
+    {
+      "filename": "peafowl.jpg",
+      "width": 852,
+      "height": 1372,
+      "size_mb": 0.15
+    },
+    {
+      "filename": "peafowl1.jpg",
+      "width": 1599,
+      "height": 899,
+      "size_mb": 0.2
+    }
+  ],
+  "adjutant-stork": [
+    {
+      "filename": "adjutant-stork.jpg",
+      "width": 1599,
+      "height": 899,
+      "size_mb": 0.12
+    }
+  ],
+  "African Grey Parrot": [
+    {
+      "filename": "African Grey Parrot.jpg",
+      "width": 1599,
+      "height": 899,
+      "size_mb": 0.06
+    }
+  ],
+  "Snake": [
+    {
+      "filename": "Snake.jpg",
+      "width": 1600,
+      "height": 900,
+      "size_mb": 0.15
+    }
+  ],
+  "reptiles": [
+    {
+      "filename": "reptiles.jpg",
+      "width": 1600,
+      "height": 1200,
+      "size_mb": 0.21
+    }
+  ]
+}
