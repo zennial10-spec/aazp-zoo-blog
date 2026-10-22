@@ -391,6 +391,20 @@ img { max-width: 100%; height: auto; display: block; }
   gap: var(--space-4);
 }
 
+@media (max-width: 480px) {
+  .wildlife-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .wildlife-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3);
+  }
+}
+
 .animal-card {
   background: var(--card);
   border: 1px solid var(--border);
@@ -1318,23 +1332,34 @@ function initializeSlideshows() {
 // INITIALIZATION
 // ============================================
 document.addEventListener('DOMContentLoaded', function() {
-  // Populate wildlife grid
-  const wildlifeGrid = document.getElementById('wildlifeGrid');
-  if (wildlifeGrid) {
-    let html = '';
-    for (const [animal, data] of Object.entries(animalData)) {
-      html += createAnimalCard(animal, data);
+  try {
+    // Populate wildlife grid
+    const wildlifeGrid = document.getElementById('wildlifeGrid');
+    if (wildlifeGrid && typeof animalData !== 'undefined') {
+      let html = '';
+      for (const [animal, data] of Object.entries(animalData)) {
+        html += createAnimalCard(animal, data);
+      }
+      wildlifeGrid.innerHTML = html;
+      
+      // Add click listeners
+      wildlifeGrid.querySelectorAll('.animal-card').forEach(card => {
+        card.addEventListener('click', () => openModal(card.dataset.animal));
+        card.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(card.dataset.animal); } });
+      });
+      
+      // Initialize slideshows for animal cards
+      initializeSlideshows();
+    } else if (wildlifeGrid) {
+      console.error('animalData is not defined');
+      wildlifeGrid.innerHTML = '<p style="text-align:center;color:var(--fg-muted);padding:var(--space-4);">Unable to load wildlife data. Please check console for errors.</p>';
     }
-    wildlifeGrid.innerHTML = html;
-    
-    // Add click listeners
-    wildlifeGrid.querySelectorAll('.animal-card').forEach(card => {
-      card.addEventListener('click', () => openModal(card.dataset.animal));
-      card.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(card.dataset.animal); } });
-    });
-    
-    // Initialize slideshows for animal cards
-    initializeSlideshows();
+  } catch (e) {
+    console.error('Wildlife grid initialization error:', e);
+    const wildlifeGrid = document.getElementById('wildlifeGrid');
+    if (wildlifeGrid) {
+      wildlifeGrid.innerHTML = '<p style="text-align:center;color:var(--accent);padding:var(--space-4);">Error loading wildlife gallery. Please refresh the page.</p>';
+    }
   }
   
   // Initialize stat counter animation
@@ -1353,7 +1378,7 @@ document.addEventListener('DOMContentLoaded', function() {
   initModal();
   
   // Initialize lightbox
-  });
+});
 
 // ============================================
 // SCROLL REVEAL
